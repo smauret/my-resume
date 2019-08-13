@@ -37,25 +37,29 @@ function App() {
   }, []);
 
   const renderExp = () => {
-    return exps.map((exp, i) => <Exp key={i} title={exp.title} company={exp.company} date={exp.date} location={exp.location}
+    return exps.map((exp, i) => <Exp key={i} title={exp.title} company={exp.company} date={exp.date}
+                                     location={exp.location}
                                      description={exp.description}/>);
 
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <Title title={'Sarah MAURET'} description={'Looking for a developer position in the USA.'}/>
-      <Grid container spacing={2} style={{
-        top: '100px',
-        width: '100%',
-        margin: '0px',
-        backgroundColor: '#dcdcdc',
-        padding: '20px'
-      }}>
-        <Grid container item xs={12} md={5} spacing={2}>
-          {renderExp()}
+      <div>
+        <Title title={'Sarah MAURET'} description={'Looking for a developer position in the USA.'}/>
+
+        <Grid container spacing={2} style={{
+          justifyContent:'center',
+          width: '100%',
+          margin: '0',
+          backgroundColor: '#dcdcdc',
+          padding: '20px'
+        }}>
+          <Grid container item xs={12} md={5} spacing={2}>
+            {renderExp()}
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     </ThemeProvider>
   );
 }

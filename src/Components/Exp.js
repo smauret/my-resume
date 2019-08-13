@@ -4,7 +4,7 @@ import {Grid, Card, CardContent, Typography} from '@material-ui/core/'
 export const Exp = ({title, company, date, location, description}) => {
   return (
     <Grid item xs={12}>
-    <Card style={{boxShadow:'unset'}}>
+    <Card elevation={0} style={{ borderRadius:'0'}}>
       <CardContent>
         <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
           {title}
