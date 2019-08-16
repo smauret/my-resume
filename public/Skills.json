@@ -1,0 +1,46 @@
+[{
+  "category":"Blockchain",
+  "name":"Ethereum",
+  "img":"ethereum-logo.png",
+  "cols":3
+},{
+  "category":"Blockchain",
+  "name":"Hyperledger Fabric",
+  "img":"fabric-logo.png",
+  "cols":2
+},{
+  "category":"Blockchain",
+  "name":"Truffle",
+  "img":"truffle-logo.png",
+  "cols":1
+},{
+  "category":"Blockchain",
+  "name":"Ganache",
+  "img":"ganache-logo.png",
+  "cols":1
+},{
+  "category":"Blockchain",
+  "name":"Web3",
+  "img":"web3-logo.png",
+  "cols":2
+},{
+  "category":"Development",
+  "name":"React/Redux",
+  "img":"react-redux-logo.png",
+  "cols":3
+},{
+  "category":"Development",
+  "name":"Jest/Enzyme",
+  "img":"jest-logo.png",
+  "cols":1
+},{
+  "category":"Other",
+  "name":"Git",
+  "img":"git-logo.png",
+  "cols":1
+},{
+  "category":"Other",
+  "name":"Agility",
+  "img":"scrum-logo.png",
+  "cols":1
+}]

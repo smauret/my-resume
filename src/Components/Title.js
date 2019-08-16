@@ -2,13 +2,13 @@ import React from 'react'
 import {Grid, Typography} from '@material-ui/core/'
 
 
-export const Title = ({title, description}) => {
+export const Title = ({sticky, title, description}) => {
   return (
 
     <Grid container item xs={12} style={{
-      height: '15%',
-      position: 'sticky',
-      top: '0',
+      height: '8em',
+      position: sticky ? 'sticky' : 'relative',
+      top: sticky ? '0' : '200px',
       backgroundColor: '#dcdcdc'
     }}>
       <Grid container item xs={12} style={{justifyContent: 'center'}}>

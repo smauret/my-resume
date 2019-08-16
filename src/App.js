@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {Grid, createMuiTheme} from '@material-ui/core/'
+import {Grid, createMuiTheme, CardContent, Card} from '@material-ui/core/'
 import {teal} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
 // import Image from './Assets/background-1.jpg';
 import {Title} from "./Components/Title";
 import {Exp} from "./Components/Exp";
+import {Skills} from "./Components/Skill";
+import {Language} from "./Components/Language";
 
 const whyDidYouRender = require('@welldone-software/why-did-you-render');
 whyDidYouRender(React);
@@ -28,35 +30,68 @@ const theme = createMuiTheme({
 });
 
 function App() {
-  const [exps, setExps] = useState([]);
+  const [experiences, setExperiences] = useState([]);
+  const [skills, setSkills] = useState([]);
+  const [sticky, setSticky] = useState(true);
 
   useEffect(() => {
-    axios.get('/Data.json').then(response => {
-      setExps(response.data)
+    axios.get('/Experiences.json').then(response => {
+      setExperiences(response.data)
+    })
+    axios.get('/Skills.json').then(response => {
+      setSkills(response.data)
     })
   }, []);
 
-  const renderExp = () => {
-    return exps.map((exp, i) => <Exp key={i} title={exp.title} company={exp.company} date={exp.date}
-                                     location={exp.location}
-                                     description={exp.description}/>);
+  const handleScroll = () => {
+    if (window.scrollY > 200) {
+      setSticky(false);
+    } else {
+      setSticky(true);
+    }
+    console.log('scrolled', window.scrollY > 200);
+  };
+  window.addEventListener('scroll', handleScroll);
 
+  const renderExp = () => {
+    return experiences.map(
+      (exp, i) => <Exp key={i}
+                       title={exp.title}
+                       company={exp.company} date={exp.date}
+                       location={exp.location}
+                       description={exp.description}/>);
   };
 
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <Title title={'Sarah MAURET'} description={'Looking for a developer position in the USA.'}/>
+        <Title sticky={sticky} title={'Sarah MAURET'} description={'Looking for a developer position in the USA.'}/>
 
         <Grid container spacing={2} style={{
-          justifyContent:'center',
+          alignContent: 'center',
+          flexDirection: 'column',
           width: '100%',
           margin: '0',
           backgroundColor: '#dcdcdc',
           padding: '20px'
         }}>
-          <Grid container item xs={12} md={5} spacing={2}>
+          <Grid container item xs={12} md={8} lg={5} spacing={2}>
+            <Grid item xs={12}>
+              <Card elevation={0} style={{borderRadius: '0', width: '100%'}}>
+                <CardContent>
+                  <Grid container item xs={12}>
+                    <Language lang={'French'} level={5}/>
+                    <Language lang={'English'} level={5}/>
+                    <Language lang={'German'} level={3}/>
+                    <Language lang={'Spanish'} level={3}/>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </Grid>
             {renderExp()}
+          </Grid>
+          <Grid container item xs={12} md={8} lg={5} spacing={2}>
+            <Skills tileData={skills}/>
           </Grid>
         </Grid>
       </div>
