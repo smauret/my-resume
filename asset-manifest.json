@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/smauret.github.io/static/js/main.d3a818a2.chunk.js",
-    "main.js.map": "/smauret.github.io/static/js/main.d3a818a2.chunk.js.map",
-    "runtime~main.js": "/smauret.github.io/static/js/runtime~main.ba2eab14.js",
-    "runtime~main.js.map": "/smauret.github.io/static/js/runtime~main.ba2eab14.js.map",
-    "static/js/2.537f088b.chunk.js": "/smauret.github.io/static/js/2.537f088b.chunk.js",
-    "static/js/2.537f088b.chunk.js.map": "/smauret.github.io/static/js/2.537f088b.chunk.js.map",
-    "index.html": "/smauret.github.io/index.html",
-    "precache-manifest.8ca6653ee16be413e58569d4e3480e43.js": "/smauret.github.io/precache-manifest.8ca6653ee16be413e58569d4e3480e43.js",
-    "service-worker.js": "/smauret.github.io/service-worker.js"
+    "main.js": "/my-resume/static/js/main.88995c20.chunk.js",
+    "main.js.map": "/my-resume/static/js/main.88995c20.chunk.js.map",
+    "runtime~main.js": "/my-resume/static/js/runtime~main.1423441b.js",
+    "runtime~main.js.map": "/my-resume/static/js/runtime~main.1423441b.js.map",
+    "static/js/2.537f088b.chunk.js": "/my-resume/static/js/2.537f088b.chunk.js",
+    "static/js/2.537f088b.chunk.js.map": "/my-resume/static/js/2.537f088b.chunk.js.map",
+    "index.html": "/my-resume/index.html",
+    "precache-manifest.5a0cffeb08982ead5b5fef65eb403bbd.js": "/my-resume/precache-manifest.5a0cffeb08982ead5b5fef65eb403bbd.js",
+    "service-worker.js": "/my-resume/service-worker.js"
   }
 }
