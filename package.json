@@ -2,7 +2,7 @@
   "name": "my-resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/smauret.github.io",
+  "homepage": "https://yourusername.github.io/my-resume",
   "dependencies": {
     "@material-ui/core": "^4.3.1",
     "@material-ui/styles": "^4.3.0",
