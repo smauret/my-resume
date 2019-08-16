@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "415d89ec23eb46f9f7da1edc472c4610",
+    "revision": "6018028af98c6996efb2297237417137",
     "url": "/my-resume/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/my-resume/static/js/2.537f088b.chunk.js"
   },
   {
-    "revision": "b41559f67652a08f143b",
-    "url": "/my-resume/static/js/main.810f1cad.chunk.js"
+    "revision": "ff7958768c6a06b63f4d",
+    "url": "/my-resume/static/js/main.5c6b6c6d.chunk.js"
   },
   {
     "revision": "2f7b259ab1933d650523",
