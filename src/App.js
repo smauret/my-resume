@@ -32,6 +32,7 @@ const theme = createMuiTheme({
 function App() {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [educations, setEducations] = useState([]);
   const [sticky, setSticky] = useState(true);
 
   useEffect(() => {
@@ -40,7 +41,10 @@ function App() {
     });
     axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Skills.json').then(response => {
       setSkills(response.data)
-    })
+    });
+    axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Educations.json').then(response => {
+      setEducations(response.data)
+    });
   }, []);
 
   const handleScroll = () => {
@@ -49,7 +53,6 @@ function App() {
     } else {
       setSticky(true);
     }
-    console.log('scrolled', window.scrollY > 200);
   };
   window.addEventListener('scroll', handleScroll);
 
@@ -60,6 +63,15 @@ function App() {
                        company={exp.company} date={exp.date}
                        location={exp.location}
                        description={exp.description}/>);
+  };
+
+  const renderEd = () => {
+    return educations.map(
+      (ed, i) => <Exp key={i}
+                      title={ed.title} courses={ed.courses}
+                      school={ed.school} date={ed.date}
+                      location={ed.location}
+                      description={ed.description}/>);
   };
 
   return (
@@ -88,6 +100,7 @@ function App() {
                 </CardContent>
               </Card>
             </Grid>
+            {renderEd()}
             {renderExp()}
           </Grid>
           <Grid container item xs={12} md={8} lg={5} spacing={2}>
