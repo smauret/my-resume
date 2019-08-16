@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/smauret.github.io/static/js/main.d3a818a2.chunk.js",
+    "main.js.map": "/smauret.github.io/static/js/main.d3a818a2.chunk.js.map",
+    "runtime~main.js": "/smauret.github.io/static/js/runtime~main.ba2eab14.js",
+    "runtime~main.js.map": "/smauret.github.io/static/js/runtime~main.ba2eab14.js.map",
+    "static/js/2.537f088b.chunk.js": "/smauret.github.io/static/js/2.537f088b.chunk.js",
+    "static/js/2.537f088b.chunk.js.map": "/smauret.github.io/static/js/2.537f088b.chunk.js.map",
+    "index.html": "/smauret.github.io/index.html",
+    "precache-manifest.8ca6653ee16be413e58569d4e3480e43.js": "/smauret.github.io/precache-manifest.8ca6653ee16be413e58569d4e3480e43.js",
+    "service-worker.js": "/smauret.github.io/service-worker.js"
+  }
+}
