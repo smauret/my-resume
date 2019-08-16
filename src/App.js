@@ -35,10 +35,10 @@ function App() {
   const [sticky, setSticky] = useState(true);
 
   useEffect(() => {
-    axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Experiences.json').then(response => {
+    axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Experiences.json').then(response => {
       setExperiences(response.data)
     });
-    axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Skills.json').then(response => {
+    axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Skills.json').then(response => {
       setSkills(response.data)
     })
   }, []);
