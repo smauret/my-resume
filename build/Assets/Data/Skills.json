@@ -11,12 +11,12 @@
 },{
   "category":"Blockchain",
   "name":"Truffle",
-  "img":"truffle-logo.png",
+  "img":"Assets/Logos/truffle-logo.png",
   "cols":1
 },{
   "category":"Blockchain",
   "name":"Ganache",
-  "img":"ganache-logo.png",
+  "img":"Assets/Logos/ganache-logo.png",
   "cols":1
 },{
   "category":"Blockchain",

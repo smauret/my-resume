@@ -3,8 +3,8 @@ import axios from 'axios';
 import {Grid, createMuiTheme, CardContent, Card} from '@material-ui/core/'
 import {teal} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
-// import Image from './Assets/background-1.jpg';
-import {Title} from "./Components/Title";
+import ImageLecture from './Assets/sarah-lecture.jpg';
+import {Info} from "./Components/Info";
 import {Exp} from "./Components/Exp";
 import {Skills} from "./Components/Skill";
 import {Language} from "./Components/Language";
@@ -50,6 +50,7 @@ function App() {
   const handleScroll = () => {
     if (window.scrollY > 200) {
       setSticky(false);
+      console.log(window.scrollY)
     } else {
       setSticky(true);
     }
@@ -76,38 +77,47 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <Title sticky={sticky} title={'Sarah MAURET'} description={'Looking for a developer position in the USA.'}/>
+      <Grid container elevation={4} style={{backgroundColor: '#3f4240', width: '100%', justifyContent: 'center'}}>
 
-        <Grid container spacing={2} style={{
-          alignContent: 'center',
-          flexDirection: 'column',
-          width: '100%',
-          margin: '0',
-          backgroundColor: '#dcdcdc',
-          padding: '20px'
-        }}>
-          <Grid container item xs={12} md={8} lg={5} spacing={2}>
-            <Grid item xs={12}>
+        <Grid style={{width: '100%', height: '100%', margin: '8px'}}>
+
+          <Info sticky={sticky} title={'Sarah MAURET'} description={'Looking for a developer position in the USA.'}/>
+
+          <Grid container spacing={2} style={{
+            alignContent: 'center',
+            flexDirection: 'column',
+            width: '100%',
+            margin: '0',
+            backgroundColor: 'white',
+          }}>
+
+            <div title={'Giving an Ethereum intro class to engineering students - June 2019'}
+                 style={{
+                   height: '50vh',
+                   margin: '30px 0',
+                   backgroundSize: 'contain',
+                   backgroundImage: `url(${ImageLecture})`,
+                   backgroundRepeat: 'no-repeat'
+                 }}/>
+
+            <Grid container item xs={12} md={10} lg={8} spacing={2}>
               <Card elevation={0} style={{borderRadius: '0', width: '100%'}}>
                 <CardContent>
                   <Grid container item xs={12}>
-                    <Language lang={'French'} level={5}/>
-                    <Language lang={'English'} level={5}/>
-                    <Language lang={'German'} level={3}/>
-                    <Language lang={'Spanish'} level={3}/>
+                    <Language lang={'French (Mother tongue)'} level={5}/>
+                    <Language lang={'German (Survivable)'} level={3}/>
+                    <Language lang={'English (Daily use)'} level={5}/>
+                    <Language lang={'Spanish (Si, Señor)'} level={3}/>
                   </Grid>
                 </CardContent>
               </Card>
+              {renderEd()}
+              {renderExp()}
+              <Skills tileData={skills}/>
             </Grid>
-            {renderEd()}
-            {renderExp()}
-          </Grid>
-          <Grid container item xs={12} md={8} lg={5} spacing={2}>
-            <Skills tileData={skills}/>
           </Grid>
         </Grid>
-      </div>
+      </Grid>
     </ThemeProvider>
   );
 }
