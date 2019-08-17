@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {Grid, createMuiTheme, CardContent, Card} from '@material-ui/core/'
+import {Grid, createMuiTheme, CardContent, Card, CardMedia} from '@material-ui/core/'
 import {teal} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
 import ImageLecture from './Assets/sarah-lecture.jpg';
@@ -48,12 +48,12 @@ function App() {
   }, []);
 
   const handleScroll = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 120) {
       setSticky(false);
-      console.log(window.scrollY)
     } else {
       setSticky(true);
     }
+    console.log(window.scrollY)
   };
   window.addEventListener('scroll', handleScroll);
 
@@ -77,9 +77,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container elevation={4} style={{backgroundColor: '#3f4240', width: '100%', justifyContent: 'center'}}>
+      <Grid container style={{backgroundColor: '#3f4240', width: '100%', justifyContent: 'center'}}>
 
-        <Grid style={{width: '100%', height: '100%', margin: '8px'}}>
+        <Grid container item elevation={4} style={{width: '100%', height: '100%', margin: '0 8px'}}>
 
           <Info sticky={sticky} title={'Sarah MAURET'} description={'Looking for a developer position in the USA.'}/>
 
@@ -91,16 +91,17 @@ function App() {
             backgroundColor: 'white',
           }}>
 
-            <div title={'Giving an Ethereum intro class to engineering students - June 2019'}
-                 style={{
-                   height: '50vh',
-                   margin: '30px 0',
-                   backgroundSize: 'contain',
-                   backgroundImage: `url(${ImageLecture})`,
-                   backgroundRepeat: 'no-repeat'
-                 }}/>
-
             <Grid container item xs={12} md={10} lg={8} spacing={2}>
+                <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
+                           component={'img'}
+                           image={ImageLecture}
+                     style={{
+                       height: '20%',
+                       width: '100%',
+                       // margin: '30px 0',
+                       backgroundSize: 'contain',
+                       backgroundRepeat: 'no-repeat'
+                     }}/>
               <Card elevation={0} style={{borderRadius: '0', width: '100%'}}>
                 <CardContent>
                   <Grid container item xs={12}>

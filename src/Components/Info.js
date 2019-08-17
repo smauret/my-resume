@@ -6,11 +6,11 @@ export const Info = ({sticky, title, description}) => {
   return (
 
     <Grid container item xs={12} style={{
-      height: '11em',
       position: sticky ? 'sticky' : 'relative',
-      top: sticky ? '10px' : '210px',
+      top: sticky ? '10px' : '130px',
       backgroundColor: 'white',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      paddingBottom: '15px'
     }}>
       <Grid container item xs={12} style={{justifyContent: 'center'}}>
         <Typography color={"primary"} variant="h2">{title}</Typography>

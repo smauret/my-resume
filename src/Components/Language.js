@@ -23,11 +23,11 @@ export const Language = ({lang, level}) => {
   };
 
   return (
-    <Grid container item xs={6}>
-      <Grid container item xs={5} style={{justifyContent: 'center'}}>
+    <Grid container item xs={12} md={6}>
+      <Grid container item xs={7} style={{justifyContent: 'center'}}>
         <Typography variant="subtitle2" style={{color: '#808080', alignSelf:'center'}}>{lang}</Typography>
       </Grid>
-      <Grid container item xs={6}>
+      <Grid container item xs={5}>
         <Typography color={"primary"} variant="h5" style={{width:'fit-content'}}>{stars(level)}</Typography>
         <Typography color={"secondary"} variant="h5" style={{width:'fit-content'}}>{stars(5-level)}</Typography>
       </Grid>
