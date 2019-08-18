@@ -44,7 +44,7 @@ export const Language = () => {
   return (
     <Grid container item xs={12} style={{padding:'20px 0'}}>
       {languages.map(l =>  {
-      return (<Grid container item xs={12} md={6}>
+      return (<Grid key={l.lang} container item xs={12} md={6}>
         <Grid container item xs={7} style={{justifyContent: 'center'}}>
           <Typography variant="subtitle2" style={{color: '#808080', alignSelf: 'center'}}>{l.lang}</Typography>
         </Grid>

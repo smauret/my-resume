@@ -9,7 +9,8 @@ import {teal} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
 import ImageLecture from './Assets/sarah-lecture.jpg';
 import {Info} from "./Components/Info";
-import {Exp} from "./Components/Exp";
+import {Experiences} from "./Components/Exp";
+import {Educations} from "./Components/Education";
 import {Skills} from "./Components/Skill";
 import {Language} from "./Components/Language";
 
@@ -57,27 +58,8 @@ function App() {
     } else {
       setSticky(true);
     }
-    // console.log(window.scrollY)
   };
   window.addEventListener('scroll', handleScroll);
-
-  const renderExp = () => {
-    return experiences.map(
-      (exp, i) => <Exp key={i}
-                       title={exp.title}
-                       company={exp.company} date={exp.date}
-                       location={exp.location}
-                       description={exp.description}/>);
-  };
-
-  const renderEd = () => {
-    return educations.map(
-      (ed, i) => <Exp key={i}
-                      title={ed.title} courses={ed.courses}
-                      school={ed.school} date={ed.date}
-                      location={ed.location}
-                      description={ed.description}/>);
-  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -85,7 +67,7 @@ function App() {
 
         <Grid container item elevation={4} style={{width: '100%', height: '100%', margin: '0 8px'}}>
 
-          <Info sticky={sticky} title={'Hi, I\'m Sarah'} description={'Looking for a developer position in the USA.'}/>
+          <Info sticky={sticky} title={'Hi, I\'m Sarah'} description={'Looking for a developer position in the Silicon Valley.'}/>
 
           <Grid container spacing={2} style={{
             justifyContent: 'center',
@@ -107,9 +89,9 @@ function App() {
             </Grid>
 
             <Grid container item xs={12} md={6} spacing={2}>
+              <Educations educations={educations}/>
+              <Experiences experiences={experiences}/>
               <Language/>
-              {renderEd()}
-              {renderExp()}
               <Skills tileData={skills}/>
             </Grid>
 

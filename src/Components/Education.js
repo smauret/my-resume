@@ -4,7 +4,7 @@ import {Grid, Card, CardContent, Typography} from '@material-ui/core/'
 export const Education = ({title, school, date, location, courses, description}) => {
   return (
     <Grid item xs={12}>
-      <Card elevation={0} style={{ borderRadius:'0'}}>
+      <Card elevation={0} style={{borderRadius: '0'}}>
         <CardContent>
           <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
             {title}
@@ -15,7 +15,8 @@ export const Education = ({title, school, date, location, courses, description})
           <Typography variant="subtitle2" component="h3" style={{color: '#808080', textAlign: 'right'}}>
             {date}
           </Typography>
-          {courses.map(course => <Typography variant="body1" component="h2" style={{color: '#505050', textAlign: 'left'}}>
+          {courses.map(course => <Typography key={course} variant="body1" component="h2"
+                                             style={{color: '#505050', textAlign: 'left'}}>
             {course}
           </Typography>)}
           <Typography variant="body1" component="h2" style={{color: '#505050', textAlign: 'left'}}>
@@ -24,5 +25,14 @@ export const Education = ({title, school, date, location, courses, description})
         </CardContent>
       </Card>
     </Grid>
-      )
-}
+  )
+};
+
+export const Educations = ({educations}) => {
+  return educations.map(
+    (ed, i) => <Education key={i}
+      title={ed.title} courses={ed.courses}
+      school={ed.school} date={ed.date}
+      location={ed.location}
+      description={ed.description}/>);
+};

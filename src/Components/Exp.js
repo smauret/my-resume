@@ -22,4 +22,14 @@ export const Exp = ({title, company, date, location, description}) => {
       </Card>
     </Grid>
       )
-}
+};
+
+export const Experiences = ({experiences}) => {
+  return experiences.map(
+    (exp, i) => <Exp key={i}
+                     title={exp.title}
+                     company={exp.company} date={exp.date}
+                     location={exp.location}
+                     description={exp.description}/>);
+};
+
