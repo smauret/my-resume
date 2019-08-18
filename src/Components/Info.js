@@ -10,7 +10,7 @@ export const Info = ({sticky, title, description}) => {
       top: sticky ? '10px' : '130px',
       backgroundColor: 'white',
       justifyContent: 'center',
-      paddingBottom: '15px'
+      padding: '80px 20px'
     }}>
       <Grid container item xs={12} style={{justifyContent: 'center'}}>
         <Typography color={"primary"} variant="h2">{title}</Typography>
@@ -19,7 +19,7 @@ export const Info = ({sticky, title, description}) => {
         <Typography color={"primary"} variant="subtitle1">{description}</Typography>
       </Grid>
 
-      <Grid container item xs={12} md={8} style={{justifyContent: 'center'}}>
+      {/*<Grid container item xs={12} md={8} style={{justifyContent: 'center'}}>
         <Grid container item xs={12} md={6} style={{justifyContent: 'center'}}>
           <Typography color={"secondary"} variant="subtitle2">Mail: sarah.mauret@epfedu.fr</Typography>
         </Grid>
@@ -32,7 +32,7 @@ export const Info = ({sticky, title, description}) => {
         <Grid container item xs={12} md={6} style={{justifyContent: 'center'}}>
           <Typography color={"secondary"} variant="subtitle2">Address: 20 rue Georges Bizet, Paris, France</Typography>
         </Grid>
-      </Grid>
+      </Grid>*/}
 
     </Grid>
   )

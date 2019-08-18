@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {Grid, createMuiTheme, CardContent, Card, CardMedia} from '@material-ui/core/'
+import {
+  Grid,
+  createMuiTheme,
+  CardMedia,
+} from '@material-ui/core/'
 import {teal} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
 import ImageLecture from './Assets/sarah-lecture.jpg';
@@ -36,13 +40,13 @@ function App() {
   const [sticky, setSticky] = useState(true);
 
   useEffect(() => {
-    axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Experiences.json').then(response => {
+    axios.get('./Assets/Data/Experiences.json').then(response => {//https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Skills.json
       setExperiences(response.data)
     });
-    axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Skills.json').then(response => {
+    axios.get('./Assets/Data/Skills.json').then(response => {
       setSkills(response.data)
     });
-    axios.get('https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Educations.json').then(response => {
+    axios.get('./Assets/Data/Educations.json').then(response => {
       setEducations(response.data)
     });
   }, []);
@@ -53,7 +57,7 @@ function App() {
     } else {
       setSticky(true);
     }
-    console.log(window.scrollY)
+    // console.log(window.scrollY)
   };
   window.addEventListener('scroll', handleScroll);
 
@@ -81,41 +85,34 @@ function App() {
 
         <Grid container item elevation={4} style={{width: '100%', height: '100%', margin: '0 8px'}}>
 
-          <Info sticky={sticky} title={'Sarah MAURET'} description={'Looking for a developer position in the USA.'}/>
+          <Info sticky={sticky} title={'Hi, I\'m Sarah'} description={'Looking for a developer position in the USA.'}/>
 
           <Grid container spacing={2} style={{
-            alignContent: 'center',
-            flexDirection: 'column',
+            justifyContent: 'center',
             width: '100%',
             margin: '0',
             backgroundColor: 'white',
           }}>
 
-            <Grid container item xs={12} md={10} lg={8} spacing={2}>
-                <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
-                           component={'img'}
-                           image={ImageLecture}
-                     style={{
-                       height: '20%',
-                       width: '100%',
-                       // margin: '30px 0',
-                       backgroundSize: 'contain',
-                       backgroundRepeat: 'no-repeat'
-                     }}/>
-              <Card elevation={0} style={{borderRadius: '0', width: '100%'}}>
-                <CardContent>
-                  <Grid container item xs={12}>
-                    <Language lang={'French (Mother tongue)'} level={5}/>
-                    <Language lang={'German (Survivable)'} level={3}/>
-                    <Language lang={'English (Daily use)'} level={5}/>
-                    <Language lang={'Spanish (Si, Señor)'} level={3}/>
-                  </Grid>
-                </CardContent>
-              </Card>
+            <Grid container item xs={12} md={10} spacing={2}>
+              <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
+                         component={'img'}
+                         image={ImageLecture}
+                         style={{
+                           height: '100%',
+                           width: '100%',
+                           backgroundSize: 'contain',
+                           backgroundRepeat: 'no-repeat'
+                         }}/>
+            </Grid>
+
+            <Grid container item xs={12} md={6} spacing={2}>
+              <Language/>
               {renderEd()}
               {renderExp()}
               <Skills tileData={skills}/>
             </Grid>
+
           </Grid>
         </Grid>
       </Grid>
