@@ -3,12 +3,12 @@ import {Grid, Typography} from '@material-ui/core/'
 import Typing from 'react-typing-animation';
 import Cursor from "./Cursor";
 
-export const Info = ({sticky, title, description}) => {
+export const Info = ({title, description}) => {
   return (
 
     <Grid container item xs={12} style={{
-      position: sticky ? 'sticky' : 'relative',
-      top: sticky ? '10px' : '130px',
+      position: 'relative',
+      top: '10px',
       backgroundColor: 'white',
       justifyContent: 'center',
       padding: '80px 20px'
