@@ -8,7 +8,6 @@ export const Info = ({title, description}) => {
 
     <Grid container item xs={12} style={{
       position: 'relative',
-      top: '10px',
       backgroundColor: 'white',
       justifyContent: 'center',
       padding: '80px 20px'

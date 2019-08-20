@@ -55,7 +55,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Grid container style={{backgroundColor: '#3f4240', width: '100%', justifyContent: 'center'}}>
 
-        <Grid container item elevation={4} style={{width: '100%', height: '100%', margin: '0 8px'}}>
+        <Grid container item elevation={4} style={{width: '100%', height: '100%', margin: '8px'}}>
 
           <Info title={'Hi, I\'m Sarah'}
                 description={'Looking for a developer position in the Silicon Valley.'}/>
