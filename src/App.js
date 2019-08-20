@@ -76,7 +76,7 @@ function App() {
             backgroundColor: 'white',
           }}>
 
-            <Grid container item xs={12} md={10} spacing={2}>
+            <Grid container item xs={12} md={10}>
               <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
                          component={'img'}
                          image={ImageLecture}
@@ -95,7 +95,7 @@ function App() {
               <Skills tileData={skills}/>
             </Grid>
 
-          </Grid>
+            </Grid>
         </Grid>
       </Grid>
     </ThemeProvider>

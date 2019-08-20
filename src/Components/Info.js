@@ -1,6 +1,7 @@
 import React from 'react'
 import {Grid, Typography} from '@material-ui/core/'
-
+import Typing from 'react-typing-animation';
+import Cursor from "./Cursor";
 
 export const Info = ({sticky, title, description}) => {
   return (
@@ -12,13 +13,16 @@ export const Info = ({sticky, title, description}) => {
       justifyContent: 'center',
       padding: '80px 20px'
     }}>
+
       <Grid container item xs={12} style={{justifyContent: 'center'}}>
-        <Typography color={"primary"} variant="h2">{title}</Typography>
+        <Typing cursor={<Cursor/>} speed={80}>
+          <Typography color={"primary"} variant="h2">  {title} </Typography>
+        </Typing>
       </Grid>
+
       <Grid container item xs={12} style={{justifyContent: 'center'}}>
         <Typography color={"primary"} variant="subtitle1">{description}</Typography>
       </Grid>
-
       {/*<Grid container item xs={12} md={8} style={{justifyContent: 'center'}}>
         <Grid container item xs={12} md={6} style={{justifyContent: 'center'}}>
           <Typography color={"secondary"} variant="subtitle2">Mail: sarah.mauret@epfedu.fr</Typography>
