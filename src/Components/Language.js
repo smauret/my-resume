@@ -42,17 +42,17 @@ export const Language = () => {
   };
 
   return (
-    <Grid container item xs={12} style={{padding:'20px 0'}}>
-      {languages.map(l =>  {
-      return (<Grid key={l.lang} container item xs={12} md={6}>
-        <Grid container item xs={7} style={{justifyContent: 'center'}}>
-          <Typography variant="subtitle2" style={{color: '#808080', alignSelf: 'center'}}>{l.lang}</Typography>
-        </Grid>
-        <Grid container item xs={5}>
-          <Typography color={"primary"} variant="h5" style={{width: 'fit-content'}}>{stars(l.level)}</Typography>
-          <Typography color={"secondary"} variant="h5" style={{width: 'fit-content'}}>{stars(5 - l.level)}</Typography>
-        </Grid>
-      </Grid>)
+    <Grid container item xs={12} style={{padding: '20px 0'}}>
+      {languages.map(l => {
+        return (<Grid key={l.lang} container item xs={12} md={6}>
+          <Grid container item xs={7} style={{justifyContent: 'center'}}>
+            <Typography variant="subtitle2" style={{color: '#808080', alignSelf: 'center'}}>{l.lang}</Typography>
+          </Grid>
+          <Grid container item xs={5}>
+            <Typography color={"primary"} variant="h5" style={{width: 'fit-content'}}>{stars(l.level)} </Typography>
+            <Typography color={"secondary"} variant="h5" style={{width: 'fit-content'}}>{stars(5 - l.level)}</Typography>
+          </Grid>
+        </Grid>)
       })}
     </Grid>
   )
