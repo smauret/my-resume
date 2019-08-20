@@ -4,6 +4,7 @@ import {
   Grid,
   createMuiTheme,
   CardMedia,
+  Hidden
 } from '@material-ui/core/'
 import {teal} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
@@ -67,7 +68,8 @@ function App() {
 
         <Grid container item elevation={4} style={{width: '100%', height: '100%', margin: '0 8px'}}>
 
-          <Info sticky={sticky} title={'Hi, I\'m Sarah'} description={'Looking for a developer position in the Silicon Valley.'}/>
+          <Info sticky={sticky} title={'Hi, I\'m Sarah'}
+                description={'Looking for a developer position in the Silicon Valley.'}/>
 
           <Grid container spacing={2} style={{
             justifyContent: 'center',
@@ -76,18 +78,19 @@ function App() {
             backgroundColor: 'white',
           }}>
 
-            <Grid container item xs={12} md={10}>
-              <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
-                         component={'img'}
-                         image={ImageLecture}
-                         style={{
-                           height: '100%',
-                           width: '100%',
-                           backgroundSize: 'contain',
-                           backgroundRepeat: 'no-repeat'
-                         }}/>
-            </Grid>
-
+            <Hidden xsDown>
+              <Grid container item xs={12} md={10}>
+                <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
+                           component={'img'}
+                           image={ImageLecture}
+                           style={{
+                             height: '100%',
+                             width: '100%',
+                             backgroundSize: 'contain',
+                             backgroundRepeat: 'no-repeat'
+                           }}/>
+              </Grid>
+            </Hidden>
             <Grid container item xs={12} md={6} spacing={2}>
               <Educations educations={educations}/>
               <Experiences experiences={experiences}/>
@@ -95,7 +98,7 @@ function App() {
               <Skills tileData={skills}/>
             </Grid>
 
-            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </ThemeProvider>

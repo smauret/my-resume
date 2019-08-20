@@ -15,7 +15,7 @@ export const Info = ({sticky, title, description}) => {
     }}>
 
       <Grid container item xs={12} style={{justifyContent: 'center'}}>
-        <Typing cursor={<Cursor/>} speed={80}>
+        <Typing cursor={<Cursor/>} speed={120}>
           <Typography color={"primary"} variant="h2">  {title} </Typography>
         </Typing>
       </Grid>
