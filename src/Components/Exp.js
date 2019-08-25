@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {makeStyles} from '@material-ui/core/styles';
 import clsx from 'clsx';
-import {Grid, Card, CardContent, Typography, IconButton, CardActions, Collapse} from '@material-ui/core/'
+import {Grid, Card, CardContent, Typography, IconButton, CardActions, Collapse, Box} from '@material-ui/core/'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
 const useStyles = makeStyles(theme => ({
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const Exp = ({title, company, date, location, description, detail}) => {
+export const Exp = ({title, company, date, location, description, detail, logo}) => {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
 
@@ -29,12 +29,25 @@ export const Exp = ({title, company, date, location, description, detail}) => {
     <Grid item xs={12}>
       <Card elevation={0} style={{borderRadius: '0'}}>
         <CardContent>
-          <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
-            {title}
-          </Typography>
-          <Typography color={"secondary"} variant="subtitle1" component="h3">
-            {company}
-          </Typography>
+          <Grid container>
+            <Grid item xs={2} style={{height: '100%'}}>
+              <Box border={1}>
+                <img src={logo} alt={'company logo'} style={{objectFit: 'cover', height: '100%', width: '100%'}}/>
+              </Box>
+            </Grid>
+            <Grid container item xs={10} style={{height: '100%'}}>
+              <Grid container item xs={12} style={{justifyContent: 'flex-end'}}>
+                <Typography color={"primary"} variant="h5" component="h2">
+                  {title}
+                </Typography>
+              </Grid>
+              <Grid container item xs={12} style={{justifyContent: 'flex-end'}}>
+                <Typography color={"secondary"} variant="subtitle1" component="h3">
+                  {company}
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
           <Typography variant="subtitle2" component="h3" style={{color: '#808080', textAlign: 'right'}}>
             {date}
           </Typography>
@@ -71,6 +84,7 @@ export const Experiences = ({experiences}) => {
                      company={exp.company} date={exp.date}
                      location={exp.location}
                      description={exp.description}
-                     detail={exp.detail}/>);
+                     detail={exp.detail}
+                     logo={exp.logo}/>)
 };
 
