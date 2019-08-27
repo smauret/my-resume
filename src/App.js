@@ -6,7 +6,7 @@ import {
   createMuiTheme,
   CardMedia,
 } from '@material-ui/core/'
-import {deepOrange} from '@material-ui/core/colors';
+import {amber} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
 import ImageLecture from './Assets/sarah-lecture.jpg';
 import {Info} from "./Components/Info";
@@ -23,14 +23,14 @@ const theme = createMuiTheme({
   typography: {
     fontSize: 15,
     fontFamily: 'system-ui',
-    color: deepOrange['A400']
+    color: amber['A400']
   },
   palette: {
     primary: {
-      main: deepOrange['A400']
+      main: amber['A400']
     },
     secondary: {
-      main: deepOrange[200]
+      main: amber[200]
     }
 
   }

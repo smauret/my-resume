@@ -31,7 +31,7 @@ export const Exp = ({title, company, date, location, description, detail, logo})
         <CardContent>
           <Grid container>
             <Grid item xs={2} style={{height: '100%'}}>
-              <Box border={1}>
+              <Box>
                 <img src={logo} alt={'company logo'} style={{objectFit: 'cover', height: '100%', width: '100%'}}/>
               </Box>
             </Grid>
