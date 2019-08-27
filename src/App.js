@@ -14,7 +14,6 @@ import {Experiences} from "./Components/Exp";
 import {Educations} from "./Components/Education";
 import {Skills} from "./Components/Skill";
 import {Language} from "./Components/Language";
-import {Title} from "./Components/Title";
 import {Menu} from "./Components/Menu";
 
 const whyDidYouRender = require('@welldone-software/why-did-you-render');
@@ -84,20 +83,13 @@ function App() {
             </Grid>
             <Menu list={['Experiences', 'Education', 'Skills']}/>
 
-            {/*<Grid container item xs={12} style={{justifyContent: 'flex-start'}}>*/}
-              {/*<Grid item xs={3}/>*/}
-
-              <Grid container item xs={12} md={6} spacing={2}>
-                <Title title={'Experiences'}/>
+              <Grid container item xs={12} md={6} spacing={2} style={{marginTop: '20px'}}>
                 <Experiences experiences={experiences}/>
-                <Title title={'Education'}/>
                 <Educations educations={educations}/>
-                <Title title={'Skills'}/>
                 <Language/>
                 <Skills tileData={skills}/>
               </Grid>
 
-            {/*</Grid>*/}
           </Grid>
         </Grid>
       </ThemeProvider>

@@ -78,13 +78,14 @@ export const Exp = ({title, company, date, location, description, detail, logo})
 };
 
 export const Experiences = ({experiences}) => {
-  return experiences.map(
-    (exp, i) => <Exp key={i}
-                     title={exp.title}
-                     company={exp.company} date={exp.date}
-                     location={exp.location}
-                     description={exp.description}
-                     detail={exp.detail}
-                     logo={exp.logo}/>)
+    const exps = experiences.map(
+      (exp, i) => <Exp key={i}
+                       title={exp.title}
+                       company={exp.company} date={exp.date}
+                       location={exp.location}
+                       description={exp.description}
+                       detail={exp.detail}
+                       logo={exp.logo}/>)
+  return <div id={'Experiences'}>{exps}</div>
 };
 

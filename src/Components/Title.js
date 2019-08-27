@@ -14,7 +14,7 @@ export const Title = ({title}) => {
   const classes = useStyles();
   return (
     <Grid container style={{width: 'fit-content'}}>
-      <Typography id={title} fontFamily="Monospace" color={"primary"} variant="h3" style={{padding: '10px 15px 15px 15px'}}>
+        <Typography id={title} fontFamily="Monospace" color={"primary"} variant="h3" style={{padding: '10px 15px 15px 15px'}}>
         <Box borderBottom={1} className={classes.root} style={{borderWidth: 'medium',padding: '0 5px 5px 5px'}} >{title}</Box>
       </Typography>
     </Grid>

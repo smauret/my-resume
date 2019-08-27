@@ -29,10 +29,12 @@ export const Education = ({title, school, date, location, courses, description})
 };
 
 export const Educations = ({educations}) => {
-  return educations.map(
+  let edu = educations.map(
     (ed, i) => <Education key={i}
       title={ed.title} courses={ed.courses}
       school={ed.school} date={ed.date}
       location={ed.location}
       description={ed.description}/>);
+  return <div id={'Education'}>{edu}</div>
+
 };
