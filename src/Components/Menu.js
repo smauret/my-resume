@@ -7,8 +7,8 @@ export const Menu = ({list, visibleComponent}) => {
   return (
     <Grid container item md={3} style={{position: 'sticky', top: '0', height: 'fit-content', marginTop: '20px'}}>
       {list.map(item =>
-        <Hidden smDown>
-          <Grid container item key={item} xs={12} style={{padding: '10px 20px', justifyContent: 'flex-end'}}>
+        <Hidden key={item} smDown>
+          <Grid container item xs={12} style={{padding: '10px 20px', justifyContent: 'flex-end'}}>
             <NavLink isActive={() => {
               return window.location.pathname + window.location.hash === `/#${item}` || visibleComponent === item
             }}

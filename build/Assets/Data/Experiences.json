@@ -3,13 +3,13 @@
     "title":"Developer",
     "company": "Talan Labs",
     "location": "Paris, France",
-    "date": "September to October 2019",
+    "date": "September 2018 to October 2019",
     "description":"Blockchain : Working with Ethereum development environment (Truffle, Ganache..). Creating training content on Hyperledger Fabric. Development: front-end to visualize market data at bank CACIB in React (redux, jest, enzyme, material-UI)",
     "detail": "Mentoring to a team of 5 engineering students creating a Dapp for organizing meetups with a reputation system to avoid no-show to events. Creating a lecture on the main concepts of Hyperledger Fabric and a practical traning, and going to the EPF Engineering School to give a lecture on Ethereum. Developing an interface in React to display market data at CACIB (Crédit Agricole Corporate and Investment Banking). ",
     "logo": "Assets/Logos/talan-labs-logo.jpg"
   },
   {
-    "title":"Research Assitant",
+    "title":"Research Assistant",
     "company": "Volkswagen Group",
     "location": "Wolfsburg, Germany",
     "date": "May to November 2017",

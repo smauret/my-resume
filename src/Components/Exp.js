@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {makeStyles} from '@material-ui/core/styles';
+import {Chip} from '@material-ui/core'
 import clsx from 'clsx';
 import {Grid, Card, CardContent, Typography, IconButton, CardActions, Collapse, Box} from '@material-ui/core/'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
@@ -17,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const Exp = ({title, company, date, location, description, detail, logo}) => {
+export const Exp = ({title, company, date, location, description, detail, tech, logo}) => {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
 
@@ -26,8 +27,8 @@ export const Exp = ({title, company, date, location, description, detail, logo})
   }
 
   return (
-    <Grid item xs={12}>
-      <Card elevation={0} style={{borderRadius: '0'}}>
+    <Grid item xs={12} style={{marginBottom:'10px'}}>
+      <Card elevation={expanded ? 1 :0} style={{borderRadius: '0'}}>
         <CardContent>
           <Grid container>
             <Grid item xs={2} style={{height: '100%'}}>
@@ -70,6 +71,7 @@ export const Exp = ({title, company, date, location, description, detail, logo})
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography paragraph>{detail}</Typography>
+            {tech.map(t => <Chip key={t} color="primary" label={t} style={{margin: '3px'}}/>)}
           </CardContent>
         </Collapse>
       </Card>
@@ -85,7 +87,8 @@ export const Experiences = ({experiences}) => {
                        location={exp.location}
                        description={exp.description}
                        detail={exp.detail}
-                       logo={exp.logo}/>)
+                       logo={exp.logo}
+                       tech={exp.tech}/>)
   return <div id={'Experiences'} >{exps}</div>
 };
 

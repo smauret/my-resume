@@ -57,20 +57,20 @@ function App() {
 
   const removeHash = () => {
     window.history.pushState("", document.title, window.location.pathname + window.location.search);
-  }
+  };
 
   const onChangeEd = (isVisible) => {
     isVisible && setVisibleComponent('Education')
     removeHash()
-  }
+  };
   const onChangeEx = (isVisible) => {
     isVisible && setVisibleComponent('Experiences')
     removeHash()
-  }
+  };
   const onChangeSk = (isVisible) => {
     isVisible && setVisibleComponent('Skills')
     removeHash()
-  }
+  };
 
   return (
     <BrowserRouter>
