@@ -15,6 +15,7 @@ import {Educations} from "./Components/Education";
 import {Skills} from "./Components/Skill";
 import {Language} from "./Components/Language";
 import {Menu} from "./Components/Menu";
+import VisibilitySensor from 'react-visibility-sensor'
 
 const whyDidYouRender = require('@welldone-software/why-did-you-render');
 whyDidYouRender(React);
@@ -23,14 +24,14 @@ const theme = createMuiTheme({
   typography: {
     fontSize: 15,
     fontFamily: 'system-ui',
-    color: amber['A400']
+    color: amber['A700']
   },
   palette: {
     primary: {
-      main: amber['A400']
+      main: amber['A700']
     },
     secondary: {
-      main: amber[200]
+      main: amber['A400']
     }
 
   }
@@ -40,6 +41,7 @@ function App() {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
   const [educations, setEducations] = useState([]);
+  const [visibleComponent, setVisibleComponent] = useState('');
 
   useEffect(() => {
     axios.get('./Assets/Data/Experiences.json').then(response => {//https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Skills.json
@@ -52,6 +54,23 @@ function App() {
       setEducations(response.data)
     });
   }, []);
+
+  const removeHash = () => {
+    window.history.pushState("", document.title, window.location.pathname + window.location.search);
+  }
+
+  const onChangeEd = (isVisible) => {
+    isVisible && setVisibleComponent('Education')
+    removeHash()
+  }
+  const onChangeEx = (isVisible) => {
+    isVisible && setVisibleComponent('Experiences')
+    removeHash()
+  }
+  const onChangeSk = (isVisible) => {
+    isVisible && setVisibleComponent('Skills')
+    removeHash()
+  }
 
   return (
     <BrowserRouter>
@@ -68,7 +87,7 @@ function App() {
             <Info title={'Hi, I\'m Sarah'}
                   description={'Looking for a developer position in the Silicon Valley.'}/>
 
-            <Grid container item xs={12} style={{justifyContent:'center'}}>
+            <Grid container item xs={12} style={{justifyContent: 'center'}}>
               <Grid container item xs={12} md={10}>
                 <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
                            component={'img'}
@@ -81,14 +100,20 @@ function App() {
                            }}/>
               </Grid>
             </Grid>
-            <Menu list={['Experiences', 'Education', 'Skills']}/>
+            <Menu list={['Experiences', 'Education', 'Skills']} visibleComponent={visibleComponent} />
 
-              <Grid container item xs={12} md={6} spacing={2} style={{marginTop: '20px'}}>
+            <Grid container item xs={12} md={6} spacing={2} style={{marginTop: '20px'}}>
+              <VisibilitySensor onChange={onChangeEx} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Experiences experiences={experiences}/>
+              </VisibilitySensor>
+              <VisibilitySensor onChange={onChangeEd} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Educations educations={educations}/>
+              </VisibilitySensor>
                 <Language/>
+              <VisibilitySensor onChange={onChangeSk} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Skills tileData={skills}/>
-              </Grid>
+              </VisibilitySensor>
+            </Grid>
 
           </Grid>
         </Grid>

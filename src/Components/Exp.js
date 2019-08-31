@@ -86,6 +86,6 @@ export const Experiences = ({experiences}) => {
                        description={exp.description}
                        detail={exp.detail}
                        logo={exp.logo}/>)
-  return <div id={'Experiences'}>{exps}</div>
+  return <div id={'Experiences'} >{exps}</div>
 };
 
