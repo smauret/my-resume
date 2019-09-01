@@ -8,7 +8,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 const useStyles = makeStyles(theme => ({
   expand: {
     transform: 'rotate(0deg)',
-    marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
@@ -27,8 +26,8 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
   }
 
   return (
-    <Grid item xs={12} style={{marginBottom:'10px'}}>
-      <Card elevation={expanded ? 1 :0} style={{borderRadius: '0'}}>
+    <Grid item xs={12} style={{marginBottom: '10px'}}>
+      <Card elevation={expanded ? 1 : 0} style={{borderRadius: '0'}}>
         <CardContent>
           <Grid container>
             <Grid item xs={2} style={{height: '100%'}}>
@@ -57,20 +56,29 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
           </Typography>
         </CardContent>
         <CardActions>
-          <IconButton
-            className={clsx(classes.expand, {
-              [classes.expandOpen]: expanded,
-            })}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            <ExpandMoreIcon/>
-          </IconButton>
+          <Grid container style={{justifyContent: 'flex-end'}}>
+            <Grid item xs={2}>
+              <Typography variant="body1" style={{color: '#505050', textAlign: 'right', padding: '10px 5px'}}>
+                more
+              </Typography>
+            </Grid>
+            <IconButton
+              className={clsx(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon/>
+            </IconButton>
+          </Grid>
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>{detail}</Typography>
+            {detail.map(det => det.map((d, i) => i === 0 ?
+              <Typography color={"primary"} variant="subtitle1">{d}</Typography> :
+              <Typography paragraph>⬧{d}</Typography>))}
             {tech.map(t => <Chip key={t} color="primary" label={t} style={{margin: '3px'}}/>)}
           </CardContent>
         </Collapse>
@@ -80,15 +88,15 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
 };
 
 export const Experiences = ({experiences}) => {
-    const exps = experiences.map(
-      (exp, i) => <Exp key={i}
-                       title={exp.title}
-                       company={exp.company} date={exp.date}
-                       location={exp.location}
-                       description={exp.description}
-                       detail={exp.detail}
-                       logo={exp.logo}
-                       tech={exp.tech}/>)
-  return <div id={'Experiences'} >{exps}</div>
+  const exps = experiences.map(
+    (exp, i) => <Exp key={i}
+                     title={exp.title}
+                     company={exp.company} date={exp.date}
+                     location={exp.location}
+                     description={exp.description}
+                     detail={exp.detail}
+                     logo={exp.logo}
+                     tech={exp.tech}/>)
+  return <div id={'Experiences'}>{exps}</div>
 };
 
