@@ -4,9 +4,13 @@
     "company": "Talan Labs",
     "location": "Paris, France",
     "date": "September 2018 to October 2019",
-    "description":"Blockchain : Working with Ethereum development environment (Truffle, Ganache..). Creating training content on Hyperledger Fabric. Development: front-end to visualize market data at bank CACIB in React (redux, jest, enzyme, material-UI)",
-    "detail": "Mentoring to a team of 5 engineering students creating a Dapp for organizing meetups with a reputation system to avoid no-show to events. Creating a lecture on the main concepts of Hyperledger Fabric and a practical traning, and going to the EPF Engineering School to give a lecture on Ethereum. Developing an interface in React to display market data at CACIB (Crédit Agricole Corporate and Investment Banking). ",
-    "tech" : ["Ethereum", "Solidity", "Truffle","Ganache", "React", "Redux", "Material-UI"],
+    "description":"Blockchain : Working with Ethereum development environment. Creating training content on Hyperledger Fabric. Development: front-end to visualize market data at bank CACIB in React.",
+    "detail": [["Blockchain",
+                "Mentoring to a team of 5 engineering students creating a Dapp for organizing meetups with a reputation system to avoid no-show to events.",
+                "Creating a lecture on the main concepts of Hyperledger Fabric and a practical traning, and going to the EPF Engineering School to give a lecture on Ethereum."],
+               ["React",
+                "Developing an interface in React to display market data at CACIB (Crédit Agricole Corporate and Investment Banking)."]],
+    "tech" : ["Ethereum", "Solidity", "Truffle","Ganache", "React", "Redux", "Jest", "Material-UI"],
     "logo": "Assets/Logos/talan-labs-logo.jpg"
   },
   {
@@ -15,7 +19,7 @@
     "location": "Wolfsburg, Germany",
     "date": "May to November 2017",
     "description":" Autonomous driving: estimating intentions of pedestrians, using a machine learning graphical model",
-    "detail":"",
+    "detail":[[""]],
     "tech": ["Markov Logic Network","Autonomous Driving"],
     "logo": "Assets/Logos/vw-group-logo.jpg"
   },
@@ -25,7 +29,7 @@
     "location": "Belmont, CA, USA",
     "date": "July to December 2015",
     "description":" Voice Recognition: rendering the capabilities of the audio routing platform, enabling testing of speech providers",
-    "detail":"",
+    "detail":[[""]],
     "tech":["JavaScript", "jQuery"],
     "logo": "Assets/Logos/vw-us-logo.jpg"
   }

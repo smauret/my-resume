@@ -76,10 +76,18 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            {detail.map(det => det.map((d, i) => i === 0 ?
-              <Typography color={"primary"} variant="subtitle1">{d}</Typography> :
-              <Typography paragraph>⬧{d}</Typography>))}
-            {tech.map(t => <Chip key={t} color="primary" label={t} style={{margin: '3px'}}/>)}
+            {detail.map(detail => {
+              let tasks = detail.tasks.map(t => <Typography paragraph>⬧{t}</Typography>)
+              let skills = detail.tech.map(t => <Chip key={t} color="primary" label={t} style={{margin: '3px'}}/>)
+              return (
+                <Grid>
+                  <Typography color={"primary"} variant="subtitle1">{detail.title}</Typography>
+                  {tasks}
+                  {skills}
+                </Grid>
+              )
+            })}
+
           </CardContent>
         </Collapse>
       </Card>
@@ -97,6 +105,6 @@ export const Experiences = ({experiences}) => {
                      detail={exp.detail}
                      logo={exp.logo}
                      tech={exp.tech}/>)
-  return <div id={'Experiences'}>{exps}</div>
+  return <div id={'Experiences'} style={{margin: '0 0 50px 0'}}>{exps}</div>
 };
 

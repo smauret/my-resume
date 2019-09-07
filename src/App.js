@@ -12,7 +12,7 @@ import ImageLecture from './Assets/sarah-lecture.jpg';
 import {Info} from "./Components/Info";
 import {Experiences} from "./Components/Exp";
 import {Educations} from "./Components/Education";
-import {Skills} from "./Components/Skill";
+import {Tldr} from "./Components/Tldr";
 import {Language} from "./Components/Language";
 import {Menu} from "./Components/Menu";
 import VisibilitySensor from 'react-visibility-sensor'
@@ -39,7 +39,6 @@ const theme = createMuiTheme({
 
 function App() {
   const [experiences, setExperiences] = useState([]);
-  const [skills, setSkills] = useState([]);
   const [educations, setEducations] = useState([]);
   const [visibleComponent, setVisibleComponent] = useState('');
 
@@ -48,7 +47,6 @@ function App() {
       setExperiences(response.data)
     });
     axios.get('./Assets/Data/Skills.json').then(response => {
-      setSkills(response.data)
     });
     axios.get('./Assets/Data/Educations.json').then(response => {
       setEducations(response.data)
@@ -67,8 +65,9 @@ function App() {
     isVisible && setVisibleComponent('Experiences')
     removeHash()
   };
-  const onChangeSk = (isVisible) => {
-    isVisible && setVisibleComponent('Skills')
+
+  const onChangeTl = (isVisible) => {
+    isVisible && setVisibleComponent('tl;dr')
     removeHash()
   };
 
@@ -100,7 +99,7 @@ function App() {
                            }}/>
               </Grid>
             </Grid>
-            <Menu list={['Experiences', 'Education', 'Skills']} visibleComponent={visibleComponent} />
+            <Menu list={['Experiences', 'Education', 'tl;dr']} visibleComponent={visibleComponent} />
 
             <Grid container item xs={12} md={6} spacing={2} style={{marginTop: '20px'}}>
               <VisibilitySensor onChange={onChangeEx} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
@@ -109,10 +108,10 @@ function App() {
               <VisibilitySensor onChange={onChangeEd} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Educations educations={educations}/>
               </VisibilitySensor>
-                <Language/>
-              <VisibilitySensor onChange={onChangeSk} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
-                <Skills tileData={skills}/>
+              <VisibilitySensor onChange={onChangeTl} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
+                <Tldr/>
               </VisibilitySensor>
+              <Language/>
             </Grid>
 
           </Grid>

@@ -1,36 +1,103 @@
 [
   {
-    "title":"Developer",
+    "title": "Developer",
     "company": "Talan Labs",
     "location": "Paris, France",
     "date": "September 2018 to October 2019",
-    "description":"Blockchain : Working with Ethereum development environment. Creating training content on Hyperledger Fabric. Development: front-end to visualize market data at bank CACIB in React.",
-    "detail": [["Blockchain",
-                "Mentoring to a team of 5 engineering students creating a Dapp for organizing meetups with a reputation system to avoid no-show to events.",
-                "Creating a lecture on the main concepts of Hyperledger Fabric and a practical traning, and going to the EPF Engineering School to give a lecture on Ethereum."],
-               ["React",
-                "Developing an interface in React to display market data at CACIB (Crédit Agricole Corporate and Investment Banking)."]],
-    "tech" : ["Ethereum", "Solidity", "Truffle","Ganache", "React", "Redux", "Jest", "Material-UI"],
+    "description": "I started working at Talan Labs as a developer after my graduation in 2018. There are two distinct parts to this work experience: fisrt Blockchain and then React.",
+    "detail": [
+      {
+        "title": "Blockchain",
+        "tasks": [
+          "Mentoring to a team of 5 engineering students creating a Dapp for organizing meetups with a reputation system to avoid no-show to events.",
+          "Creating a lecture on the main concepts of Hyperledger Fabric and a practical traning, and going to the EPF Engineering School to give lectures on Ethereum and Hyperledger Fabric."
+        ],
+        "tech": [
+          "Ethereum",
+          "Solidity",
+          "Truffle",
+          "Ganache"
+        ]
+      },
+      {
+        "title": "React",
+        "tasks": [
+          "Developing an interface in React to display market data at CACIB (Crédit Agricole Corporate and Investment Banking)."
+        ],
+        "tech": [
+          "React",
+          "Redux",
+          "Jest",
+          "Material-UI"
+        ]
+      }
+    ],
     "logo": "Assets/Logos/talan-labs-logo.jpg"
   },
   {
-    "title":"Research Assistant",
+    "title": "Research Assistant",
     "company": "Volkswagen Group",
     "location": "Wolfsburg, Germany",
     "date": "May to November 2017",
-    "description":" Autonomous driving: estimating intentions of pedestrians, using a machine learning graphical model",
-    "detail":[[""]],
-    "tech": ["Markov Logic Network","Autonomous Driving"],
+    "description": " Autonomous driving: estimating intentions of pedestrians, using a machine learning graphical model",
+    "detail": [
+      {
+        "title": "Blockchain",
+        "tasks": [
+          "Mentoring to a team of 5 engineering students creating a Dapp for organizing meetups with a reputation system to avoid no-show to events.",
+          "Creating a lecture on the main concepts of Hyperledger Fabric and a practical traning, and going to the EPF Engineering School to give a lecture on Ethereum."
+        ],
+        "tech": [
+          "Ethereum",
+          "Solidity",
+          "Truffle",
+          "Ganache"
+        ]
+      },
+      {
+        "title": "React",
+        "tasks": [
+          "Developing an interface in React to display market data at CACIB (Crédit Agricole Corporate and Investment Banking)."
+        ],
+        "tech": [
+          "Markov Logic Network",
+          "Autonomous Driving"
+        ]
+      }
+    ],
     "logo": "Assets/Logos/vw-group-logo.jpg"
   },
   {
-    "title":"Software Engineering Intern",
+    "title": "Software Engineering Intern",
     "company": "Electronics Research Lab - VWGoA",
     "location": "Belmont, CA, USA",
     "date": "July to December 2015",
-    "description":" Voice Recognition: rendering the capabilities of the audio routing platform, enabling testing of speech providers",
-    "detail":[[""]],
-    "tech":["JavaScript", "jQuery"],
+    "description": " Voice Recognition: rendering the capabilities of the audio routing platform, enabling testing of speech providers",
+    "detail": [
+      {
+        "title": "Blockchain",
+        "tasks": [
+          "Mentoring to a team of 5 engineering students creating a Dapp for organizing meetups with a reputation system to avoid no-show to events.",
+          "Creating a lecture on the main concepts of Hyperledger Fabric and a practical traning, and going to the EPF Engineering School to give a lectures on Ethereum and Hyperledger Fabric."
+        ],
+        "tech": [
+          "Ethereum",
+          "Solidity",
+          "Truffle",
+          "Ganache"
+        ]
+      },
+      {
+        "title": "React",
+        "tasks": [
+          "Developing an interface in React to display market data at CACIB (Crédit Agricole Corporate and Investment Banking)."
+        ],
+        "tech": [
+          "JavaScript",
+          "jQuery"
+        ]
+      }
+    ],
     "logo": "Assets/Logos/vw-us-logo.jpg"
   }
 ]
