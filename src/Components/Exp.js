@@ -27,30 +27,30 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
 
   return (
     <Grid item xs={12} style={{marginBottom: '10px'}}>
-      <Card elevation={expanded ? 1 : 0} style={{borderRadius: '0'}}>
+      <Card elevation={expanded ? 1 : 0} style={{borderRadius: '2'}}>
         <CardContent>
-          <Grid container>
+          <Grid container style={{alignItems:'center', marginBottom:'30px'}}>
             <Grid item xs={2} style={{height: '100%'}}>
               <Box>
                 <img src={logo} alt={'company logo'} style={{objectFit: 'cover', height: '100%', width: '100%'}}/>
               </Box>
             </Grid>
             <Grid container item xs={10} style={{height: '100%'}}>
-              <Grid container item xs={12} style={{justifyContent: 'flex-end'}}>
+              <Grid container item xs={12} style={{justifyContent: 'center'}}>
                 <Typography color={"primary"} variant="h5" component="h2">
                   {title}
                 </Typography>
               </Grid>
-              <Grid container item xs={12} style={{justifyContent: 'flex-end'}}>
+              {/*<Grid container item xs={12} style={{justifyContent: 'center'}}>
                 <Typography color={"secondary"} variant="subtitle1" component="h3">
                   {company}
                 </Typography>
-              </Grid>
+              </Grid>*/}
             </Grid>
-          </Grid>
-          <Typography variant="subtitle2" component="h3" style={{color: '#808080', textAlign: 'right'}}>
+          <Typography variant="subtitle2" component="h3" style={{color: '#808080', textAlign: 'left'}}>
             {date}
           </Typography>
+          </Grid>
           <Typography variant="body1" component="h2" style={{color: '#505050', textAlign: 'left'}}>
             {description}
           </Typography>
@@ -77,10 +77,10 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             {detail.map(detail => {
-              let tasks = detail.tasks.map(t => <Typography paragraph>⬧{t}</Typography>)
-              let skills = detail.tech.map(t => <Chip key={t} color="primary" label={t} style={{margin: '3px'}}/>)
+              let tasks = detail.tasks.map(t => <Typography key={t} paragraph>&#8226; {t}</Typography>)
+              let skills = detail.tech.map(t => <Chip key={t}  variant="outlined" color="primary" label={t} style={{margin: '3px'}}/>)
               return (
-                <Grid>
+                <Grid key={detail}>
                   <Typography color={"primary"} variant="subtitle1">{detail.title}</Typography>
                   {tasks}
                   {skills}
@@ -105,6 +105,8 @@ export const Experiences = ({experiences}) => {
                      detail={exp.detail}
                      logo={exp.logo}
                      tech={exp.tech}/>)
-  return <div id={'Experiences'} style={{margin: '0 0 50px 0'}}>{exps}</div>
+  return <Grid id={'Experiences'} style={{margin: '0 0 25px 0'}}>
+    {exps}
+  </Grid>
 };
 

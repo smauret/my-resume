@@ -4,7 +4,7 @@ import {BrowserRouter} from "react-router-dom";
 import {
   Grid,
   createMuiTheme,
-  CardMedia,
+  CardMedia, Divider,
 } from '@material-ui/core/'
 import {amber} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
@@ -13,8 +13,8 @@ import {Info} from "./Components/Info";
 import {Experiences} from "./Components/Exp";
 import {Educations} from "./Components/Education";
 import {Tldr} from "./Components/Tldr";
-import {Language} from "./Components/Language";
 import {Menu} from "./Components/Menu";
+import {More} from "./Components/More";
 import VisibilitySensor from 'react-visibility-sensor'
 
 const whyDidYouRender = require('@welldone-software/why-did-you-render');
@@ -71,6 +71,11 @@ function App() {
     removeHash()
   };
 
+  const onChangeMore = (isVisible) => {
+    isVisible && setVisibleComponent('More')
+    removeHash()
+  };
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
@@ -99,19 +104,24 @@ function App() {
                            }}/>
               </Grid>
             </Grid>
-            <Menu list={['Experiences', 'Education', 'tl;dr']} visibleComponent={visibleComponent} />
+            <Menu list={['Experiences', 'Education', 'More', 'tl;dr']} visibleComponent={visibleComponent} />
 
             <Grid container item xs={12} md={6} spacing={2} style={{marginTop: '20px'}}>
               <VisibilitySensor onChange={onChangeEx} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Experiences experiences={experiences}/>
               </VisibilitySensor>
+              <Divider variant="middle" style={{width:'100%'}}/>
               <VisibilitySensor onChange={onChangeEd} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Educations educations={educations}/>
               </VisibilitySensor>
+              <Divider variant="middle" style={{width:'100%'}}/>
+              <VisibilitySensor onChange={onChangeMore} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
+                <More/>
+              </VisibilitySensor>
+              <Divider variant="middle" style={{width:'100%'}}/>
               <VisibilitySensor onChange={onChangeTl} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Tldr/>
               </VisibilitySensor>
-              <Language/>
             </Grid>
 
           </Grid>

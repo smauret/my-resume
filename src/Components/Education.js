@@ -35,6 +35,6 @@ export const Educations = ({educations}) => {
       school={ed.school} date={ed.date}
       location={ed.location}
       description={ed.description}/>);
-  return <div id={'Education'} style={{margin: '50px 0'}}>{edu}</div>
+  return <Grid id={'Education'} style={{margin: '25px 0'}}>{edu}</Grid>
 
 };
