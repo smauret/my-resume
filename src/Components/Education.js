@@ -15,13 +15,13 @@ export const Education = ({title, school, date, location, courses, description})
           <Typography variant="subtitle2" component="h3" style={{color: '#808080', textAlign: 'right'}}>
             {date}
           </Typography>
-          {courses.map(course => <Typography key={course} variant="body1" component="h2"
-                                             style={{color: '#505050', textAlign: 'left'}}>
-            {course}
-          </Typography>)}
           <Typography variant="body1" component="h2" style={{color: '#505050', textAlign: 'left'}}>
             {description}
           </Typography>
+          <Typography color={"primary"} variant="subtitle1">Main courses:</Typography>
+          {courses.map(course => <Typography key={course} variant="body1" component="h2" style={{color: '#505050', textAlign: 'left'}}>
+            &#8226; {course}
+          </Typography>)}
         </CardContent>
       </Card>
     </Grid>
@@ -35,6 +35,6 @@ export const Educations = ({educations}) => {
       school={ed.school} date={ed.date}
       location={ed.location}
       description={ed.description}/>);
-  return <Grid id={'Education'} style={{margin: '25px 0'}}>{edu}</Grid>
+  return <Grid item xs={12} id={'Education'} style={{margin: '25px 0'}}>{edu}</Grid>
 
 };

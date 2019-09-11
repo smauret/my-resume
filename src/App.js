@@ -110,15 +110,15 @@ function App() {
               <VisibilitySensor onChange={onChangeEx} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Experiences experiences={experiences}/>
               </VisibilitySensor>
-              <Divider variant="middle" style={{width:'100%'}}/>
+              <Divider style={{width:'100%'}}/>
               <VisibilitySensor onChange={onChangeEd} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Educations educations={educations}/>
               </VisibilitySensor>
-              <Divider variant="middle" style={{width:'100%'}}/>
+              <Divider style={{width:'100%'}}/>
               <VisibilitySensor onChange={onChangeMore} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <More/>
               </VisibilitySensor>
-              <Divider variant="middle" style={{width:'100%'}}/>
+              <Divider style={{width:'100%'}}/>
               <VisibilitySensor onChange={onChangeTl} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Tldr/>
               </VisibilitySensor>

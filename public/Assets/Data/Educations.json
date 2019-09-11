@@ -1,11 +1,20 @@
 [
   {
-    "title": "MS Electrical and Computer Engineering",
+    "title": "MS Computer Engineering",
     "school": "Georgia Institute of Technology",
     "location": "Atlanta, USA / Metz, Fance",
     "date": "2016 to 2018",
-    "courses": ["Cryptography", "Computer Security", "Programming Techniques C++", "Machine Learning for Robotics", "Autonomous Robotics", "Network", "MEMS", "Accounting", "Technology Ventures"],
-    "description": "• Creating a Dapp deployed on Ropsten • Implementing discovery algorithm and planner on robot (use SLAM, Kalman filter)"
+    "courses": [
+      "Cryptography",
+      "Computer Security",
+      "Programming Techniques C++",
+      "Machine Learning for Robotics",
+      "Autonomous Robotics",
+      "Network",
+      "MEMS",
+      "Technology Ventures"
+    ],
+    "description": "I studied for my MS degree in the department of Computer Engineering in Metz (France) and Atlanta (Georgia, USA)."
   },
   {
     "title": "Engineering Degree CS Major",
@@ -13,14 +22,14 @@
     "location": "Sceaux, France",
     "date": "2012 to 2017",
     "courses": ["Information system management", "General engineering", "Mathematics", "Physics", "Chemistry"],
-    "description": "• Implementing an Android app for facial recogni-tion using the Principal Component Analysis (PCA) • Developing a timetable management web application for a sport federation (Swedish Fit)"
+    "description": "The EPF is a french Engineering School."
   },
   {
     "title": "High School Diploma",
     "school": "High School Louis Pasteur",
     "location": "Lempdes, France",
     "date": "2009 to 2012",
-    "courses": [],
+    "courses": ["Mathematics", "Physics"],
     "description": "French Baccalauréat, science major with distinction"
   }
 ]
