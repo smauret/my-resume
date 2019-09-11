@@ -1,5 +1,7 @@
 import React from 'react'
 import {Grid, Typography} from '@material-ui/core/'
+import StarBorderIcon from '@material-ui/icons/StarBorder';
+import StarIcon from '@material-ui/icons/Star';
 
 export const Language = () => {
 
@@ -22,7 +24,7 @@ export const Language = () => {
     },
   ];
 
-  const stars = level => {
+  const starss = level => {
     switch (level) {
       case 0:
         return '';
@@ -41,6 +43,17 @@ export const Language = () => {
     }
   };
 
+  const stars = level => {
+    let stars = []
+    for (let i =0; i<level; i++){
+      stars.push(<StarIcon color={"primary"}/>)
+    }
+    for (let i =0; i<5-level; i++){
+      stars.push(<StarBorderIcon color={"primary"}/>)
+    }
+    return stars
+  }
+
   return (
     <Grid container item xs={12} style={{padding: '20px 0'}}>
       {languages.map(l => {
@@ -49,8 +62,7 @@ export const Language = () => {
             <Typography variant="subtitle2" style={{color: '#808080', alignSelf: 'center'}}>{l.lang}</Typography>
           </Grid>
           <Grid container item xs={5}>
-            <Typography color={"primary"} variant="h5" style={{width: 'fit-content'}}>{stars(l.level)} </Typography>
-            <Typography color={"secondary"} variant="h5" style={{width: 'fit-content'}}>{stars(5 - l.level)}</Typography>
+            {stars(l.level).map(s => <Typography align={'center'} color={"primary"} variant="h5" style={{width: 'fit-content'}}> {s} </Typography>)}
           </Grid>
         </Grid>)
       })}
