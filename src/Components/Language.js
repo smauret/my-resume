@@ -62,7 +62,7 @@ export const Language = () => {
             <Typography variant="subtitle2" style={{color: '#808080', alignSelf: 'center'}}>{l.lang}</Typography>
           </Grid>
           <Grid container item xs={5}>
-            {stars(l.level).map(s => <Typography align={'center'} color={"primary"} variant="h5" style={{width: 'fit-content'}}> {s} </Typography>)}
+            {stars(l.level).map((s,i) => <Typography key={i} align={'center'} color={"primary"} variant="h5" style={{width: 'fit-content'}}> {s} </Typography>)}
           </Grid>
         </Grid>)
       })}

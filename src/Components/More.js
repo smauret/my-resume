@@ -44,7 +44,7 @@ export const More = () => {
   const classes = useStyles();
 
   const article = data =>
-    <Grid item xs={4} key={data.link}>
+    <Grid item xs={12} lg={4} key={data.link} style={{margin:'20px 0'}}>
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
@@ -70,7 +70,7 @@ export const More = () => {
   const sports = icons =>
     <Grid container spacing={2}>
       {icons.map( img =>
-        <Grid item xs={4} md={3}>
+        <Grid key={img} item xs={4} md={3}>
           <CardMedia
             className={classes.media}
             component={'img'}
@@ -89,12 +89,21 @@ export const More = () => {
 
   return (
     <Grid id={'More'} container item xs={12} style={{margin: '25px 0'}}>
+      <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
+        Languages
+      </Typography>
       <Language/>
 
+      <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
+        Articles
+      </Typography>
       <Grid container spacing={2}>
         {articles.map(a => article(a))}
       </Grid>
 
+      <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
+        Hobbies
+      </Typography>
       {sports([IconKite,IconClimb])}
     </Grid>
   )

@@ -106,7 +106,7 @@ function App() {
             </Grid>
             <Menu list={['Experiences', 'Education', 'More', 'tl;dr']} visibleComponent={visibleComponent} />
 
-            <Grid container item xs={12} md={6} spacing={2} style={{marginTop: '20px'}}>
+            <Grid container item xs={12} md={6} spacing={2} style={{margin:'20px 8px 8px 8px'}}>
               <VisibilitySensor onChange={onChangeEx} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
                 <Experiences experiences={experiences}/>
               </VisibilitySensor>
