@@ -22,6 +22,7 @@ export const Info = ({title, description}) => {
       <Grid container item xs={12} style={{justifyContent: 'center'}}>
         <Typography color={"primary"} variant="subtitle1">{description}</Typography>
       </Grid>
+
       {/*<Grid container item xs={12} md={8} style={{justifyContent: 'center'}}>
         <Grid container item xs={12} md={6} style={{justifyContent: 'center'}}>
           <Typography color={"primary"} variant="subtitle1">sarah.mauret@epfedu.fr</Typography>

@@ -14,15 +14,15 @@
       "MEMS",
       "Technology Ventures"
     ],
-    "description": "I studied for my MS degree in the department of Computer Engineering in Metz (France) and Atlanta (Georgia, USA)."
+    "description": "During my MS degree in the Department of Computer Engineering I studied at the Georgia Tech Campus sites of Metz (France) and Atlanta (Georgia, USA)."
   },
   {
-    "title": "Engineering Degree CS Major",
+    "title": "MS/BS Engineering Degree",
     "school": "EPF – Graduate School of Engineering",
     "location": "Sceaux, France",
     "date": "2012 to 2017",
-    "courses": ["Information system management", "General engineering", "Mathematics", "Physics", "Chemistry"],
-    "description": "The EPF is a french Engineering School."
+    "courses": ["Information system management", "General engineering", "Mathematics", "Physics"],
+    "description": "I studied at the EPF for my BS in General Engineering and then MS in IT."
   },
   {
     "title": "High School Diploma",

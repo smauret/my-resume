@@ -9,7 +9,13 @@ export const Tldr = () => {
       I am a developer with (some) experience in Blockchain and React looking for an opportunity in the Silicon
     Valley.
     </Typography>
+    <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
+      Technical skills
+    </Typography>
     <Radar tech={true}/>
+    <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
+      Soft skills
+    </Typography>
     <Radar tech={false}/>
   </Grid>
   )
