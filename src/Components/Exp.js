@@ -81,7 +81,7 @@ export const Experiences = ({experiences}) => {
                      detail={exp.detail}
                      logo={exp.logo}
                      tech={exp.tech}/>)
-  return <Grid id={'Experiences'} style={{margin: '0 0 25px 0'}}>
+  return <Grid item xs={12} id={'Experiences'} style={{margin: '25px 0'}}>
     {exps}
   </Grid>
 };

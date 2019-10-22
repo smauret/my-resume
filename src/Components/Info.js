@@ -1,8 +1,7 @@
 import React from 'react'
-import {Grid, Typography, Box} from '@material-ui/core/'
+import {Grid, Typography, Box, Button} from '@material-ui/core/'
 import Typing from 'react-typing-animation';
 import Cursor from "./Cursor";
-
 export const Info = ({title, description}) => {
   return (
 
@@ -19,14 +18,18 @@ export const Info = ({title, description}) => {
             <Box fontWeight="fontWeightBold" m={1}>
               {title}
             </Box>
-            </Typography>
+          </Typography>
         </Typing>
       </Grid>
 
       <Grid container item xs={12} style={{justifyContent: 'left'}}>
-        <Typography color={"black"} variant="subtitle1">{description}</Typography>
+        <Typography color={"black"} variant="subtitle1" style={{paddingLeft: '12px'}}>{description}</Typography>
       </Grid>
-
+      <Grid container item xs={12} style={{justifyContent: 'left', paddingLeft: '9px'}}>
+        <Button variant="outlined" color="primary" style={{margin: '3px'}} href="mailto:sarah.mauret@epfedu.fr">
+          Get in contact
+        </Button>
+      </Grid>
     </Grid>
   )
 };

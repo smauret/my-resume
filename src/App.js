@@ -113,6 +113,7 @@ function App() {
                                 partialVisibility={true}>
                 <Tldr/>
               </VisibilitySensor>
+              <Divider style={{width: '100%'}}/>
               <VisibilitySensor onChange={onChangeEx} offset={{bottom: document.documentElement.clientHeight * 0.6}}
                                 partialVisibility={true}>
                 <Experiences experiences={experiences}/>
@@ -127,7 +128,6 @@ function App() {
                                 partialVisibility={true}>
                 <More/>
               </VisibilitySensor>
-              <Divider style={{width: '100%'}}/>
             </Grid>
 
           </Grid>
