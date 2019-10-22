@@ -13,8 +13,8 @@ export const Menu = ({list, visibleComponent}) => {
               return window.location.pathname + window.location.hash === `/#${item}` || visibleComponent === item
             }}
                      smooth to={`/#${item}`}
-                     activeStyle={{fontWeight: "bold", fontSize: '36px', borderBottom: '3px solid black'}}
-                     style={{textDecoration: 'none', fontSize: '31px', fontFamily: 'system-ui', color: grey['800']}}>
+                     activeStyle={{fontWeight: "bold", color:'black', fontSize: '36px', borderBottom: '3px solid black'}}
+                     style={{textDecoration: 'none', fontSize: '20px', fontFamily: 'system-ui', color: grey['400']}}>
               {item}
             </NavLink>
           </Grid>

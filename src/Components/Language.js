@@ -24,25 +24,6 @@ export const Language = () => {
     },
   ];
 
-  const starss = level => {
-    switch (level) {
-      case 0:
-        return '';
-      case 1:
-        return '★';
-      case 2:
-        return '★★';
-      case 3:
-        return '★★★';
-      case 4:
-        return '★★★★';
-      case 5:
-        return '★★★★★';
-      default:
-        return '★★★★★'
-    }
-  };
-
   const stars = level => {
     let stars = []
     for (let i =0; i<level; i++){

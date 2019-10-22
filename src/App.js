@@ -88,10 +88,12 @@ function App() {
             backgroundColor: 'white',
             justifyContent: 'flex-start',
           }}>
-            <Info title={'Hi, I\'m Sarah'}
-                  description={'Looking for a developer position in the Silicon Valley.'}/>
 
             <Grid container item xs={12} style={{justifyContent: 'center'}}>
+              <Grid container item xs={12} md={10}>
+                <Info title={'Hi, I\'m Sarah'}
+                      description={'Looking for a developer position in the Silicon Valley.'}/>
+              </Grid>
               <Grid container item xs={12} md={10}>
                 <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
                            component={'img'}
@@ -104,24 +106,28 @@ function App() {
                            }}/>
               </Grid>
             </Grid>
-            <Menu list={['Experiences', 'Education', 'More', 'tl;dr']} visibleComponent={visibleComponent} />
+            <Menu list={['tl;dr', 'Experiences', 'Education', 'More']} visibleComponent={visibleComponent}/>
 
-            <Grid container item xs={12} md={6} spacing={2} style={{margin:'20px 8px 8px 8px'}}>
-              <VisibilitySensor onChange={onChangeEx} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
-                <Experiences experiences={experiences}/>
-              </VisibilitySensor>
-              <Divider style={{width:'100%'}}/>
-              <VisibilitySensor onChange={onChangeEd} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
-                <Educations educations={educations}/>
-              </VisibilitySensor>
-              <Divider style={{width:'100%'}}/>
-              <VisibilitySensor onChange={onChangeMore} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
-                <More/>
-              </VisibilitySensor>
-              <Divider style={{width:'100%'}}/>
-              <VisibilitySensor onChange={onChangeTl} offset={{bottom:document.documentElement.clientHeight * 0.6}} partialVisibility={true}>
+            <Grid container item xs={12} md={6} spacing={2} style={{margin: '20px 8px 8px 8px'}}>
+              <VisibilitySensor onChange={onChangeTl} offset={{bottom: document.documentElement.clientHeight * 0.6}}
+                                partialVisibility={true}>
                 <Tldr/>
               </VisibilitySensor>
+              <VisibilitySensor onChange={onChangeEx} offset={{bottom: document.documentElement.clientHeight * 0.6}}
+                                partialVisibility={true}>
+                <Experiences experiences={experiences}/>
+              </VisibilitySensor>
+              <Divider style={{width: '100%'}}/>
+              <VisibilitySensor onChange={onChangeEd} offset={{bottom: document.documentElement.clientHeight * 0.6}}
+                                partialVisibility={true}>
+                <Educations educations={educations}/>
+              </VisibilitySensor>
+              <Divider style={{width: '100%'}}/>
+              <VisibilitySensor onChange={onChangeMore} offset={{bottom: document.documentElement.clientHeight * 0.6}}
+                                partialVisibility={true}>
+                <More/>
+              </VisibilitySensor>
+              <Divider style={{width: '100%'}}/>
             </Grid>
 
           </Grid>
