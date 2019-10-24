@@ -14,7 +14,7 @@ export const Info = ({title, description}) => {
 
       <Grid container item xs={12} style={{justifyContent: 'left'}}>
         <Typing cursor={<Cursor/>} speed={120}>
-          <Typography color={"black"} fontWeight={'bold'} variant="h2">
+          <Typography fontWeight={'bold'} variant="h2">
             <Box fontWeight="fontWeightBold" m={1}>
               {title}
             </Box>
@@ -23,7 +23,7 @@ export const Info = ({title, description}) => {
       </Grid>
 
       <Grid container item xs={12} style={{justifyContent: 'left'}}>
-        <Typography color={"black"} variant="subtitle1" style={{paddingLeft: '12px'}}>{description}</Typography>
+        <Typography variant="subtitle1" style={{paddingLeft: '12px'}}>{description}</Typography>
       </Grid>
       <Grid container item xs={12} style={{justifyContent: 'left', paddingLeft: '9px'}}>
         <Button variant="outlined" color="primary" style={{margin: '3px'}} href="mailto:sarah.mauret@epfedu.fr">

@@ -17,7 +17,7 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
           <Grid container style={{alignItems: 'center', marginBottom: '30px'}}>
             <Grid container item xs={10} style={{height: '100%', justifyContent: 'left'}}>
               <Grid container item xs={12} style={{height: '100%', justifyContent: 'left'}}>
-                <Typography color={'black'} variant="h5" component="h2">
+                <Typography variant="h5" component="h2">
                   <Box style={{margin: 0}} fontWeight="fontWeightBold" m={1}>
                     {title}
                   </Box>
@@ -40,11 +40,13 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
           </Typography>
         </CardContent>
         <CardActions>
+          <Grid container item xs={9} md={11} style={{justifyContent: 'flex-start'}}>
           {detail.map(d => d.tech.map(t => <Chip key={t} variant="outlined" color="primary" label={t}
                                                  style={{margin: '3px'}}/>))}
-          <Grid container style={{justifyContent: 'flex-end'}}>
+          </Grid>
+          <Grid container item xs={3} md={1} xl style={{justifyContent: 'flex-end'}}>
             <Fab elevation={0} color="primary" aria-label="expand" onClick={handleExpandClick}
-                 style={{color: 'white', boxShadow: '4px 6px 6px -1px #ccc'}}>
+                 style={{color: 'white', boxShadow: '4px 6px 6px -1px #ccc', height: '28px', width:'36px'}}>
               {expanded ? <RemoveIcon/> : <AddIcon/>}
             </Fab>
           </Grid>
