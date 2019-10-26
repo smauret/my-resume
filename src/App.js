@@ -21,9 +21,10 @@ const whyDidYouRender = require('@welldone-software/why-did-you-render');
 whyDidYouRender(React);
 
 const theme = createMuiTheme({
+  // fontFamily: 'Big Shoulders Text', cursive,
   typography: {
     fontSize: 15,
-    fontFamily: 'system-ui',
+    fontFamily: ['Inconsolata', 'cursive'],
     color: amber['A700']
   },
   palette: {
@@ -33,7 +34,6 @@ const theme = createMuiTheme({
     secondary: {
       main: amber['A400']
     }
-
   }
 });
 

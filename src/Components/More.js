@@ -7,11 +7,14 @@ import ImageS2G from '../Assets/dev-team-share2gether.jpg';
 import ImageEth from '../Assets/ethereum-2.png';
 import IconKite from '../Assets/icon-kite.png';
 import IconClimb from '../Assets/bouldering.png';
+import PedestrianProject from '../Assets/pedestrian-intention-project.png';
+import BeerPongProject from '../Assets/beer-pong-project.png';
+import PersonalProject from '../Assets/personal-project.png';
 
 const useStyles = makeStyles({
   card: {
     maxWidth: 245,
-    height: 345
+    height: 245
   },
   media: {
     height: 140,
@@ -39,18 +42,36 @@ const articles = [
   }
 ];
 
+const projects = [
+  {
+    title: 'Pedestrians intention detection',
+    image: PedestrianProject,
+    text: 'This project was about researching, proposing and implementing a solution to find the intention of the traffic participants in urban environments. It is using a logical-probabilistic approach.The system proposed focuses first on the pedestrians’ intention of crossing the road. '
+  },
+  {
+    title: 'Beer Pong Game',
+    image: BeerPongProject,
+    text: 'This project is a beer pong game implemented in C++ using Urho3D as game engine.'
+  },
+  {
+    title: 'Personal project: jump height measurement',
+    image: PersonalProject,
+    text: 'This project is mixing hardware and software development in building a jump height measurement sensor for kiteboarders.'
+  },
+];
+
 export const More = () => {
 
   const classes = useStyles();
 
   const article = data =>
-    <Grid item xs={12} lg={4} key={data.link} style={{margin:'20px 0'}}>
+    <Grid item xs={12} lg={4} key={data.link} style={{margin: '20px 0'}}>
       <Card className={classes.card}>
-        <CardMedia
+        {/*        <CardMedia
           className={classes.media}
           image={data.image}
           title="article image"
-        />
+        />*/}
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {data.title}
@@ -67,9 +88,38 @@ export const More = () => {
       </Card>
     </Grid>
 
+
+  const project = data =>
+    <Grid container item xs={12} spacing={2} key={data.title} style={{padding: '20px 0'}}>
+      <Grid item xs={12} md={4}>
+        <Card style={{marginTop: '10px'}}>
+          <CardMedia
+            className={classes.media}
+            image={data.image}
+            title="project image"
+          />
+        </Card>
+      </Grid>
+
+      <Grid container item xs={12} md={8} spacing={2}>
+        <Grid item xs={12}>
+          <Typography gutterBottom variant="h5" component="h2">
+            {data.title}
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant="body2" component="p">
+            {data.text}
+          </Typography>
+        </Grid>
+      </Grid>
+
+    </Grid>
+
+
   const sports = icons =>
     <Grid container spacing={2}>
-      {icons.map( img =>
+      {icons.map(img =>
         <Grid key={img} item xs={4} md={3}>
           <CardMedia
             className={classes.media}
@@ -95,6 +145,13 @@ export const More = () => {
       <Language/>
 
       <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
+        Projects
+      </Typography>
+      <Grid container spacing={2}>
+        {projects.map(a => project(a))}
+      </Grid>
+
+      <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
         Articles
       </Typography>
       <Grid container spacing={2}>
@@ -104,7 +161,7 @@ export const More = () => {
       <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
         Hobbies
       </Typography>
-      {sports([IconKite,IconClimb])}
+      {sports([IconKite, IconClimb])}
     </Grid>
   )
 }

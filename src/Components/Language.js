@@ -11,7 +11,7 @@ export const Language = () => {
       level: 5
     },
     {
-      lang: 'German (Survivable)',
+      lang: 'German (Jawohl)',
       level: 3
     },
     {
@@ -39,10 +39,10 @@ export const Language = () => {
     <Grid container item xs={12} style={{padding: '20px 0'}}>
       {languages.map(l => {
         return (<Grid key={l.lang} container item xs={12} md={6}>
-          <Grid container item xs={7} style={{justifyContent: 'center'}}>
+          <Grid container item xs={6} style={{justifyContent: 'left'}}>
             <Typography variant="subtitle2" style={{color: '#808080', alignSelf: 'center'}}>{l.lang}</Typography>
           </Grid>
-          <Grid container item xs={5}>
+          <Grid container item xs={6} style={{justifyContent: 'left'}}>
             {stars(l.level).map((s,i) => <Typography key={i} align={'center'} color={"primary"} variant="h5" style={{width: 'fit-content'}}> {s} </Typography>)}
           </Grid>
         </Grid>)
