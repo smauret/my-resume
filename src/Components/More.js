@@ -54,7 +54,7 @@ const projects = [
     text: 'This project is a beer pong game implemented in C++ using Urho3D as game engine.'
   },
   {
-    title: 'Personal project: jump height measurement',
+    title: 'Jump height measurement',
     image: PersonalProject,
     text: 'This project is mixing hardware and software development in building a jump height measurement sensor for kiteboarders.'
   },
