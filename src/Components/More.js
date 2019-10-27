@@ -51,12 +51,14 @@ const projects = [
   {
     title: 'Beer Pong Game',
     image: BeerPongProject,
-    text: 'This project is a beer pong game implemented in C++ using Urho3D as game engine.'
+    text: 'This project is a beer pong game implemented in C++ using Urho3D as game engine.',
+    github: 'https://github.com/smauret/beerponggame'
   },
   {
     title: 'Jump height measurement',
     image: PersonalProject,
-    text: 'This project is mixing hardware and software development in building a jump height measurement sensor for kiteboarders.'
+    text: 'This project is mixing hardware and software development in building a jump height measurement sensor for kiteboarders.',
+    github: 'https://github.com/smauret/how-high'
   },
 ];
 
@@ -112,6 +114,13 @@ export const More = () => {
             {data.text}
           </Typography>
         </Grid>
+        {data.github !== undefined &&
+        <Grid item xs={12}>
+          <Typography variant="body2" component="p">
+            GitHub: <a href={data.github}>{data.github} </a>
+          </Typography>
+        </Grid>
+        }
       </Grid>
 
     </Grid>
