@@ -12,7 +12,7 @@ export const Info = ({title, description}) => {
       padding: '80px 20px'
     }}>
 
-      <Grid container item xs={12} style={{justifyContent: 'left'}}>
+      <Grid container item xs={12} style={{justifyContent: 'flex-start'}}>
         <Typing cursor={<Cursor/>} speed={120}>
           <Typography fontWeight={'bold'} variant="h2">
             <Box fontWeight="fontWeightBold" m={1}>

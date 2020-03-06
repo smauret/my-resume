@@ -92,7 +92,7 @@ function App() {
             <Grid container item xs={12} style={{justifyContent: 'center'}}>
               <Grid container item xs={12} md={10}>
                 <Info title={'Hi, I\'m Sarah'}
-                      description={'Looking for a developer position in the Silicon Valley.'}/>
+                      description={'Looking for a developer position in Berlin.'}/>
               </Grid>
               <Grid container item xs={12} md={10}>
                 <CardMedia title={'Giving an Ethereum intro class to engineering students - June 2019'}
