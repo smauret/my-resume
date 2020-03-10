@@ -49,9 +49,9 @@ const projects = [
     text: 'This project was about researching, proposing and implementing a solution to find the intention of the traffic participants in urban environments. It is using a logical-probabilistic approach.The system proposed focuses first on the pedestrians’ intention of crossing the road. '
   },
   {
-    title: 'Beer Pong Game',
+    title: 'Game',
     image: BeerPongProject,
-    text: 'This project is a beer pong game implemented in C++ using Urho3D as game engine.',
+    text: 'This project is a "throwing ball" game implemented in C++ using Urho3D as game engine.',
     github: 'https://github.com/smauret/beerponggame'
   }
 /*  {
