@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fe200f56bd27494fb9050cb398b04c53",
+    "revision": "d4ff095c0bf5cf1f253505a54398a15b",
     "url": "/my-resume/index.html"
   },
   {
-    "revision": "351efe69821821882abf",
-    "url": "/my-resume/static/js/2.7ad0bc8d.chunk.js"
+    "revision": "095ab34e245a41025937",
+    "url": "/my-resume/static/js/2.f86a2823.chunk.js"
   },
   {
-    "revision": "b1bbe1ef323dba905306",
-    "url": "/my-resume/static/js/main.8f87fa0a.chunk.js"
+    "revision": "964f6c90d80d5ebd26e9",
+    "url": "/my-resume/static/js/main.6e6cd7bc.chunk.js"
   },
   {
     "revision": "2f7b259ab1933d650523",
@@ -32,6 +32,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/my-resume/static/media/blockchain.65728d89.png"
   },
   {
+    "revision": "0587ef6d9d46c2c2c209a1749cc8ecc5",
+    "url": "/my-resume/static/media/climbing-sarah.0587ef6d.jpg"
+  },
+  {
     "revision": "eb98d0b7a737e3e30b4ef94a56d35363",
     "url": "/my-resume/static/media/dev-team-share2gether.eb98d0b7.jpg"
   },
@@ -40,12 +44,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/my-resume/static/media/ethereum-2.f279b77b.png"
   },
   {
-    "revision": "c80a276026b6ca4cb2666a3fe19a4bda",
-    "url": "/my-resume/static/media/pedestrian-intention-project.c80a2760.png"
+    "revision": "8cc6efcc09846a674746f3aa0675a736",
+    "url": "/my-resume/static/media/kiting-sarah.8cc6efcc.jpg"
   },
   {
-    "revision": "9b76cfbc105c08ac78e9ba67784da9a9",
-    "url": "/my-resume/static/media/personal-project.9b76cfbc.png"
+    "revision": "c80a276026b6ca4cb2666a3fe19a4bda",
+    "url": "/my-resume/static/media/pedestrian-intention-project.c80a2760.png"
   },
   {
     "revision": "47ce6e77f039020ee2e76a10c1e988e9",
