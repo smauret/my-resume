@@ -1,5 +1,8 @@
 import React from 'react'
-import {Grid, Typography, Paper} from '@material-ui/core/'
+import {Grid, Typography, CardMedia} from '@material-ui/core/'
+import LogoBlockchain from '../Assets/blockchain.png';
+import LogoReact from '../Assets/react.png';
+import LogoAgile from '../Assets/agility.png';
 
 /*const skills = [
     {axis: 'Ethereum', value: 70},
@@ -14,9 +17,9 @@ import {Grid, Typography, Paper} from '@material-ui/core/'
 ]*/
 
 const skills = [
-    {name: 'Blockchain', value: '38%', color:'#ffa000'},
-    {name: 'React', value: '38%', color:'#dc004e'},
-    {name: 'Methodology', value: '24%', color:'#8bc34a'},
+    {name: 'Blockchain', logo: LogoBlockchain, color:'#ffa000'},
+    {name: 'React', logo: LogoReact, color:'#dc004e'},
+    {name: 'Methodology', logo: LogoAgile, color:'#8bc34a'},
 ]
 
 export const Tldr = () => {
@@ -24,7 +27,7 @@ export const Tldr = () => {
         <Grid id={'tl;dr'} container item xs={12} spacing={2} style={{margin: '25px 0'}}>
             <Grid container item xs={12} spacing={2}>
                 <Typography paragraph>
-                    I am a developer with experience in Blockchain Technologies and React looking for an opportunity in
+                    I am a developer with one year experience in Blockchain Technologies and React looking for an opportunity in
                     Berlin.
                 </Typography>
             </Grid>
@@ -34,11 +37,15 @@ export const Tldr = () => {
                     My skills
                 </Typography>
             </Grid>
-            <Grid container item xs={12} spacing={2} elevation={2} style={{justifyContent: 'flex-start', alignItems:'center'}}>
+            <Grid container item xs={12} spacing={4} style={{justifyContent: 'center', alignItems:'stretch'}}>
                 {skills.map(s =>
-                    <Paper elevation={0} square style={{width: s.value, backgroundColor: s.color}}>
-                        <Typography paragraph> {s.name} </Typography>
-                    </Paper>
+                    <Grid container item xs={4} style={{justifyContent: 'center', alignItems:'flex-end'}}>
+                        <CardMedia title={s.name}
+                               component={'img'}
+                               image={s.logo}
+                        />
+                        <Grid><Typography paragraph align={'center'}> {s.name} </Typography></Grid>
+                    </Grid>
                 )}
             </Grid>
         </Grid>
