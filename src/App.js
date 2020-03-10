@@ -4,7 +4,7 @@ import {BrowserRouter} from "react-router-dom";
 import {
   Grid,
   createMuiTheme,
-  CardMedia, Divider,
+  CardMedia,
 } from '@material-ui/core/'
 import {amber} from '@material-ui/core/colors';
 import {ThemeProvider} from '@material-ui/styles';
@@ -40,7 +40,7 @@ const theme = createMuiTheme({
 function App() {
   const [experiences, setExperiences] = useState([]);
   const [educations, setEducations] = useState([]);
-  const [visibleComponent, setVisibleComponent] = useState('');
+  const [visibleComponent, setVisibleComponent] = useState('tl;dr');
 
   useEffect(() => {
     axios.get('./Assets/Data/Experiences.json').then(response => {//https://raw.githubusercontent.com/smauret/my-resume/master/public/Assets/Data/Skills.json
@@ -106,6 +106,7 @@ function App() {
                            }}/>
               </Grid>
             </Grid>
+
             <Menu list={['tl;dr', 'Experiences', 'Education', 'More']} visibleComponent={visibleComponent}/>
 
             <Grid container item xs={12} md={6} spacing={2} style={{margin: '20px 8px 8px 8px'}}>
@@ -113,17 +114,17 @@ function App() {
                                 partialVisibility={true}>
                 <Tldr/>
               </VisibilitySensor>
-              <Divider style={{width: '100%'}}/>
+              {/*<Divider style={{width: '100%'}}/>*/}
               <VisibilitySensor onChange={onChangeEx} offset={{bottom: document.documentElement.clientHeight * 0.6}}
                                 partialVisibility={true}>
                 <Experiences experiences={experiences}/>
               </VisibilitySensor>
-              <Divider style={{width: '100%'}}/>
+              {/*<Divider style={{width: '100%'}}/>*/}
               <VisibilitySensor onChange={onChangeEd} offset={{bottom: document.documentElement.clientHeight * 0.6}}
                                 partialVisibility={true}>
                 <Educations educations={educations}/>
               </VisibilitySensor>
-              <Divider style={{width: '100%'}}/>
+              {/*<Divider style={{width: '100%'}}/>*/}
               <VisibilitySensor onChange={onChangeMore} offset={{bottom: document.documentElement.clientHeight * 0.6}}
                                 partialVisibility={true}>
                 <More/>

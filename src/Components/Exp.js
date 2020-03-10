@@ -12,7 +12,7 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
 
   return (
     <Grid item xs={12} style={{marginBottom: '10px'}}>
-      <Card elevation={expanded ? 1 : 0} style={{borderRadius: '2'}}>
+      <Card elevation={expanded ? 1 : 0} style={{borderRadius: '2', backgroundColor: '#F0F0F0'}}>
         <CardContent>
           <Grid container style={{alignItems: 'center', marginBottom: '30px'}}>
             <Grid container item xs={10} style={{height: '100%', justifyContent: 'left'}}>
@@ -83,7 +83,7 @@ export const Experiences = ({experiences}) => {
                      detail={exp.detail}
                      logo={exp.logo}
                      tech={exp.tech}/>)
-  return <Grid item xs={12} id={'Experiences'} style={{margin: '25px 0'}}>
+  return <Grid item xs={12} id={'Experiences'} style={{margin: '25px 0', backgroundColor: '#F0F0F0'}}>
     {exps}
   </Grid>
 };

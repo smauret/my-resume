@@ -5,7 +5,7 @@ import {grey} from '@material-ui/core/colors';
 
 export const Menu = ({list, visibleComponent}) => {
   return (
-    <Grid container item md={3} style={{position: 'sticky', top: '0', height: 'fit-content', margin: '20px 8px'}}>
+    <Grid container item md={3} style={{position: 'sticky', top: '0', height: '30%', margin: '20px 8px'}}>
       {list.map(item =>
         <Hidden key={item} smDown>
           <Grid container item xs={12} style={{padding: '10px 20px', justifyContent: 'flex-end'}}>

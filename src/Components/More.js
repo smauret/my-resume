@@ -5,11 +5,11 @@ import {Language} from "./Language";
 import ImageAsseth from '../Assets/asseth-logo.jpg';
 import ImageS2G from '../Assets/dev-team-share2gether.jpg';
 import ImageEth from '../Assets/ethereum-2.png';
-import IconKite from '../Assets/icon-kite.png';
-import IconClimb from '../Assets/bouldering.png';
+import IconKite from '../Assets/kiting-sarah.jpg';
+import IconClimb from '../Assets/climbing-sarah.jpg';
 import PedestrianProject from '../Assets/pedestrian-intention-project.png';
 import BeerPongProject from '../Assets/beer-pong-project.png';
-import PersonalProject from '../Assets/personal-project.png';
+// import PersonalProject from '../Assets/personal-project.png';
 
 const useStyles = makeStyles({
   card: {
@@ -53,13 +53,13 @@ const projects = [
     image: BeerPongProject,
     text: 'This project is a beer pong game implemented in C++ using Urho3D as game engine.',
     github: 'https://github.com/smauret/beerponggame'
-  },
-  {
+  }
+/*  {
     title: 'Jump height measurement',
     image: PersonalProject,
     text: 'This project is mixing hardware and software development in building a jump height measurement sensor for kiteboarders.',
     github: 'https://github.com/smauret/how-high'
-  },
+  },*/
 ];
 
 export const More = () => {
@@ -67,7 +67,7 @@ export const More = () => {
   const classes = useStyles();
 
   const article = data =>
-    <Grid item xs={12} lg={4} key={data.link} style={{margin: '20px 0'}}>
+    <Grid item xs={12} lg={4} key={data.link} style={{margin: '20px 0', backgroundColor: '#F0F0F0'}}>
       <Card className={classes.card}>
         {/*        <CardMedia
           className={classes.media}
@@ -92,7 +92,7 @@ export const More = () => {
 
 
   const project = data =>
-    <Grid container item xs={12} spacing={2} key={data.title} style={{padding: '20px 0'}}>
+    <Grid container item xs={12} key={data.title} style={{padding: '20px 0', justifyContent:'space-around', backgroundColor: '#F0F0F0'}}>
       <Grid item xs={12} md={4}>
         <Card style={{marginTop: '10px'}}>
           <CardMedia
@@ -103,7 +103,7 @@ export const More = () => {
         </Card>
       </Grid>
 
-      <Grid container item xs={12} md={8} spacing={2}>
+      <Grid container item xs={12} md={7} spacing={2}>
         <Grid item xs={12}>
           <Typography gutterBottom variant="h5" component="h2">
             {data.title}
@@ -147,7 +147,7 @@ export const More = () => {
     </Grid>
 
   return (
-    <Grid id={'More'} container item xs={12} style={{margin: '25px 0'}}>
+    <Grid id={'More'} container item xs={12} style={{margin: '25px 0', backgroundColor: '#F0F0F0'}}>
       <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
         Languages
       </Typography>
@@ -161,7 +161,7 @@ export const More = () => {
       </Grid>
 
       <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
-        Articles
+        Articles (in french)
       </Typography>
       <Grid container spacing={2}>
         {articles.map(a => article(a))}
