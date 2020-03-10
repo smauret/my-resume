@@ -25,7 +25,7 @@ export const Exp = ({title, company, date, location, description, detail, tech, 
               </Grid>
               <Grid container item xs={12} style={{height: '100%', justifyContent: 'left'}}>
                 <Typography variant="subtitle2" component="h3" style={{color: '#808080', textAlign: 'left'}}>
-                  {date}
+                  {date} - {location}
                 </Typography>
               </Grid>
             </Grid>
