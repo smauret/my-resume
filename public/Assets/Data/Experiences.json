@@ -46,7 +46,7 @@
       {
         "title": "Autonomous Driving",
         "tasks": [
-          "I developed a C++ module to estimate the intentions of crossing the road of pedestrians, using a machine learning graphical model (Markov Logic Network)."
+          "I researched, proposed and implemented a solution to find the intention of the traffic participants in urban environments. Specifically I developed a C++ module to estimate the intentions of crossing the road of pedestrians, with a logical-probabilistic approach using a Markov Logic Network (machine learning graphical model)."
         ],
         "tech": [
           "Autonomous Driving",

@@ -7,7 +7,7 @@ export const Language = () => {
 
   const languages = [
     {
-      lang: 'French (Mother tongue)',
+      lang: 'French (Native)',
       level: 5
     },
     {

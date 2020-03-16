@@ -128,7 +128,7 @@ export const More = () => {
 
   const sports = icons =>
     <Grid container spacing={2}>
-      {icons.map(img =>
+      {icons.map(([img, text]) =>
         <Grid key={img} item xs={4} md={3}>
           <CardMedia
             className={classes.media}
@@ -142,6 +142,7 @@ export const More = () => {
               backgroundRepeat: 'no-repeat'
             }}
           />
+            <typography paragraphe> {text}</typography>
         </Grid>
       )}
     </Grid>
@@ -153,12 +154,12 @@ export const More = () => {
       </Typography>
       <Language/>
 
-      <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
+      {/*<Typography color={"primary"} variant="h5" component="h2" align={'center'}>
         Projects
       </Typography>
       <Grid container spacing={2}>
         {projects.map(a => project(a))}
-      </Grid>
+      </Grid>*/}
 
       <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
         Articles (in french)
@@ -170,7 +171,7 @@ export const More = () => {
       <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
         Hobbies
       </Typography>
-      {sports([IconKite, IconClimb])}
+      {sports([[IconKite, "Kiting since 2016"], [IconClimb, "Climbing since 2018"]])}
     </Grid>
   )
 }
