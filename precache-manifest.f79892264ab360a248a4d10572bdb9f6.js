@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d4ff095c0bf5cf1f253505a54398a15b",
+    "revision": "68d300c0e6cc3c642007e970eada23d7",
     "url": "/my-resume/index.html"
   },
   {
-    "revision": "095ab34e245a41025937",
-    "url": "/my-resume/static/js/2.f86a2823.chunk.js"
+    "revision": "b288634b42c10ec89680",
+    "url": "/my-resume/static/js/2.488239f3.chunk.js"
   },
   {
-    "revision": "964f6c90d80d5ebd26e9",
-    "url": "/my-resume/static/js/main.6e6cd7bc.chunk.js"
+    "revision": "06d11e0028b3ff0ee557",
+    "url": "/my-resume/static/js/main.d44e0b8d.chunk.js"
   },
   {
     "revision": "2f7b259ab1933d650523",
@@ -22,10 +22,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "545ad0113421ab6be14fd1190f814652",
     "url": "/my-resume/static/media/asseth-logo.545ad011.jpg"
-  },
-  {
-    "revision": "8bc0b69577967689c1b5686d44586117",
-    "url": "/my-resume/static/media/beer-pong-project.8bc0b695.png"
   },
   {
     "revision": "65728d89a53bb8d60653e271ebd9ac73",
@@ -46,10 +42,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8cc6efcc09846a674746f3aa0675a736",
     "url": "/my-resume/static/media/kiting-sarah.8cc6efcc.jpg"
-  },
-  {
-    "revision": "c80a276026b6ca4cb2666a3fe19a4bda",
-    "url": "/my-resume/static/media/pedestrian-intention-project.c80a2760.png"
   },
   {
     "revision": "47ce6e77f039020ee2e76a10c1e988e9",
