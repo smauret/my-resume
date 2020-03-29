@@ -7,9 +7,6 @@ import ImageS2G from '../Assets/dev-team-share2gether.jpg';
 import ImageEth from '../Assets/ethereum-2.png';
 import IconKite from '../Assets/kiting-sarah.jpg';
 import IconClimb from '../Assets/climbing-sarah.jpg';
-import PedestrianProject from '../Assets/pedestrian-intention-project.png';
-import BeerPongProject from '../Assets/beer-pong-project.png';
-// import PersonalProject from '../Assets/personal-project.png';
 
 const useStyles = makeStyles({
   card: {
@@ -42,26 +39,6 @@ const articles = [
   }
 ];
 
-const projects = [
-  {
-    title: 'Pedestrians intention detection',
-    image: PedestrianProject,
-    text: 'This project was about researching, proposing and implementing a solution to find the intention of the traffic participants in urban environments. It is using a logical-probabilistic approach.The system proposed focuses first on the pedestrians’ intention of crossing the road. '
-  },
-  {
-    title: 'Game',
-    image: BeerPongProject,
-    text: 'This project is a "throwing ball" game implemented in C++ using Urho3D as game engine.',
-    github: 'https://github.com/smauret/beerponggame'
-  }
-/*  {
-    title: 'Jump height measurement',
-    image: PersonalProject,
-    text: 'This project is mixing hardware and software development in building a jump height measurement sensor for kiteboarders.',
-    github: 'https://github.com/smauret/how-high'
-  },*/
-];
-
 export const More = () => {
 
   const classes = useStyles();
@@ -90,59 +67,23 @@ export const More = () => {
       </Card>
     </Grid>
 
-
-  const project = data =>
-    <Grid container item xs={12} key={data.title} style={{padding: '20px 0', justifyContent:'space-around', backgroundColor: '#F0F0F0'}}>
-      <Grid item xs={12} md={4}>
-        <Card style={{marginTop: '10px'}}>
-          <CardMedia
-            className={classes.media}
-            image={data.image}
-            title="project image"
-          />
-        </Card>
-      </Grid>
-
-      <Grid container item xs={12} md={7} spacing={2}>
-        <Grid item xs={12}>
-          <Typography gutterBottom variant="h5" component="h2">
-            {data.title}
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography variant="body2" component="p">
-            {data.text}
-          </Typography>
-        </Grid>
-        {data.github !== undefined &&
-        <Grid item xs={12}>
-          <Typography variant="body2" component="p">
-            GitHub: <a href={data.github}>{data.github} </a>
-          </Typography>
-        </Grid>
-        }
-      </Grid>
-
-    </Grid>
-
-
   const sports = icons =>
     <Grid container spacing={2}>
       {icons.map(([img, text]) =>
-        <Grid key={img} item xs={4} md={3}>
-          <CardMedia
-            className={classes.media}
-            component={'img'}
-            image={img}
-            title="Kite icon"
-            style={{
-              height: '100%',
-              width: '100%',
-              backgroundSize: 'contain',
-              backgroundRepeat: 'no-repeat'
-            }}
-          />
-            <typography paragraphe> {text}</typography>
+        <Grid key={img} item xs={6} md={4}>
+            <Typography variant='subtitle2' > {text}</Typography>
+            <CardMedia
+              className={classes.media}
+              component={'img'}
+              image={img}
+              title="Kite icon"
+              style={{
+                height: '90%',
+                width: '100%',
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat'
+              }}
+            />
         </Grid>
       )}
     </Grid>
@@ -153,13 +94,6 @@ export const More = () => {
         Languages
       </Typography>
       <Language/>
-
-      {/*<Typography color={"primary"} variant="h5" component="h2" align={'center'}>
-        Projects
-      </Typography>
-      <Grid container spacing={2}>
-        {projects.map(a => project(a))}
-      </Grid>*/}
 
       <Typography color={"primary"} variant="h5" component="h2" align={'center'}>
         Articles (in french)
